@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" format=3 uid="uid://d2k3yub865ayj"]
 
-[ext_resource type="Texture2D" uid="uid://dfxybqwn8d64s" path="res://assets/Gemini_Generated_Image_egdk7wegdk7wegdk.png" id="1_48p14"]
-[ext_resource type="Texture2D" uid="uid://ct3oogcnmeqqu" path="res://assets/environments/Floor Tiles 32x32/9a852255-dcb4-4375-bcbc-420f20029914.jpg" id="2_xcqve"]
+[ext_resource type="Texture2D" uid="uid://dfxybqwn8d64s" path="res://New folder/assets/Gemini_Generated_Image_egdk7wegdk7wegdk.png" id="1_48p14"]
+[ext_resource type="Texture2D" uid="uid://ct3oogcnmeqqu" path="res://New folder/assets/environments/Floor Tiles 32x32/9a852255-dcb4-4375-bcbc-420f20029914.jpg" id="2_xcqve"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcqve"]
 texture = ExtResource("1_48p14")

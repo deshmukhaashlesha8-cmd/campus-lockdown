@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cwtgt44asyhei"]
+
+[ext_resource type="Texture2D" uid="uid://dvd4hbr1w0svl" path="res://scenes/player/character-walk-cycle-v3-ezgif.com-gif-to-sprite-converter.png" id="1_5occo"]
+[ext_resource type="Script" uid="uid://bg60tylnf4obs" path="res://scenes/player/statemachine.gd" id="2_gmlin"]
+[ext_resource type="Script" uid="uid://bef40fasidyna" path="res://scenes/player/idle_state.gd" id="3_lvxji"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksqaj"]
+atlas = ExtResource("1_5occo")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1s1p2"]
+atlas = ExtResource("1_5occo")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i15bq"]
+atlas = ExtResource("1_5occo")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtmuv"]
+atlas = ExtResource("1_5occo")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfytq"]
+atlas = ExtResource("1_5occo")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_euojc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksqaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1s1p2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i15bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtmuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfytq")
+}],
+"loop": 1,
+"name": &"student",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_euojc"]
+radius = 43.185646
+
+[node name="player" type="CharacterBody2D" unique_id=501279140]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=6855073]
+position = Vector2(4.500001, 19.999992)
+scale = Vector2(0.7734375, 0.60937494)
+sprite_frames = SubResource("SpriteFrames_euojc")
+animation = &"student"
+frame_progress = 0.45773274
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250590293]
+position = Vector2(6, 21)
+shape = SubResource("CircleShape2D_euojc")
+
+[node name="statemachine" type="Node" parent="." unique_id=1929771347]
+script = ExtResource("2_gmlin")
+
+[node name="idle" type="Node" parent="statemachine" unique_id=2009834915]
+script = ExtResource("3_lvxji")

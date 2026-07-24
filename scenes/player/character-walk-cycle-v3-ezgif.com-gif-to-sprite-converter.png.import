@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcibjds065v0n"
-path="res://.godot/imported/Gemini_Generated_Image_62qa3m62qa3m62qa.png-37b3e768a8091548c28e8ce8cc62a199.ctex"
+uid="uid://dvd4hbr1w0svl"
+path="res://.godot/imported/character-walk-cycle-v3-ezgif.com-gif-to-sprite-converter.png-1b7d78aa4160936e91eb24500fe6e227.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Gemini_Generated_Image_62qa3m62qa3m62qa.png"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_62qa3m62qa3m62qa.png-37b3e768a8091548c28e8ce8cc62a199.ctex"]
+source_file="res://scenes/player/character-walk-cycle-v3-ezgif.com-gif-to-sprite-converter.png"
+dest_files=["res://.godot/imported/character-walk-cycle-v3-ezgif.com-gif-to-sprite-converter.png-1b7d78aa4160936e91eb24500fe6e227.ctex"]
 
 [params]
 
