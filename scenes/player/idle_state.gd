@@ -6,7 +6,14 @@ extends Node
 
 var direction: Vector2 = Vector2.ZERO
 
-func _process(delta: float):
+const SPEED = 90.0
+
+func _physics_process(_delta):
+	player.velocity = direction * SPEED
+	player.move_and_slide()
+
+
+func _process(_delta: float):
 	direction = Vector2.ZERO
 
 	if Input.is_action_pressed("walk_left"):
@@ -19,18 +26,26 @@ func _process(delta: float):
 		direction = Vector2.DOWN
 
 	if direction == Vector2.UP:
-		animated_sprite_2D.play("idle_back")
+		animated_sprite_2D.play("walk_back")
 	elif direction == Vector2.RIGHT:
-		animated_sprite_2D.play("idle_right")               
+		animated_sprite_2D.play("walk_right")               
 	elif direction == Vector2.DOWN:
-		animated_sprite_2D.play("idle_front")
+		animated_sprite_2D.play("walk_front")
 	elif direction == Vector2.LEFT:
-		animated_sprite_2D.play("idle_left")
+		animated_sprite_2D.play("walk_left")
 	else:
-		animated_sprite_2D.play("idle_front")
+		match direction:
+			"right":
+				animated_sprite_2D.play("idle_right")
+			"left":
+				animated_sprite_2D.play("idle_left")
+			"up":
+				animated_sprite_2D.play("idle_up")
+			"down":
+				animated_sprite_2D.play("idle_down")
 
-func _physics_process(delta: float):
-	pass
+
+
 
 func on_enter():
 	pass
