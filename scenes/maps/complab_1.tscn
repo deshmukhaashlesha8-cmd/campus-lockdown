@@ -9578,6 +9578,12 @@ tile_set = SubResource("TileSet_88xuk")
 
 [node name="player" parent="." unique_id=501279140 instance=ExtResource("1_803r6")]
 z_index = 1
-position = Vector2(143.00006, 84.00003)
+position = Vector2(152.00006, 84.00003)
 scale = Vector2(3, 3)
+motion_mode = 1
 up_direction = Vector2(0.91003895, 0.41452274)
+
+[node name="collide" type="StaticBody2D" parent="." unique_id=46446199]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collide" unique_id=1382303704]
+polygon = PackedVector2Array(63, 204, 157, 271, 148, 933, 1083, 930, 1087, -160, 139, -148, 172, 61, 133, 64, 60, -48, 51, -270, 1290, -270, 1278, 1113, 17, 1100)
