@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bqwic1sy4upr4"]
 
-[ext_resource type="PackedScene" uid="uid://cwtgt44asyhei" path="res://scenes/player/player.tscn" id="1_plro0"]
+[ext_resource type="PackedScene" uid="uid://edok3b54i02d" path="res://scenes/maps/complab_1.tscn" id="1_plro0"]
 [ext_resource type="Texture2D" uid="uid://dfxybqwn8d64s" path="res://New folder/assets/Gemini_Generated_Image_egdk7wegdk7wegdk.png" id="2_x4fop"]
 [ext_resource type="Texture2D" uid="uid://cxio28d3rgo81" path="res://New folder/assets/WhatsApp Image 2026-07-21 at 8.59.17 PM.jpeg" id="3_x4fop"]
 [ext_resource type="Texture2D" uid="uid://c2p6sg5g3n601" path="res://New folder/assets/9a852255-dcb4-4375-bcbc-420f20029914.jpg" id="4_t7k8g"]
