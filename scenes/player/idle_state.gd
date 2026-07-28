@@ -30,7 +30,7 @@ func _process(_delta: float):
 	elif direction == Vector2.RIGHT:
 		animated_sprite_2D.play("walk_right")               
 	elif direction == Vector2.DOWN:
-		animated_sprite_2D.play("walk_down")
+		animated_sprite_2D.play("walk_front")
 	elif direction == Vector2.LEFT:
 		animated_sprite_2D.play("walk_left")
 	else:
@@ -42,7 +42,7 @@ func _process(_delta: float):
 			"up":
 				animated_sprite_2D.play("walk_up")
 			"down":
-				animated_sprite_2D.play("walk_down")
+				animated_sprite_2D.play("walk_front")
 
 
 
