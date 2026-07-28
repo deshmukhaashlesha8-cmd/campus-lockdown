@@ -1,12 +1,10 @@
-[gd_scene format=3 uid="uid://c0pjp2g0gh0x1"]
+[gd_scene format=3 uid="uid://cwtgt44asyhei"]
 
-[ext_resource type="Script" uid="uid://eawfw13ps2fb" path="res://scenes/player/player.gd" id="1_0owmy"]
+[ext_resource type="Script" uid="uid://318g1ma2xbqs" path="res://scenes/player/player.gd" id="1_0owmy"]
 [ext_resource type="Texture2D" uid="uid://crw6nw5ef4xux" path="res://scenes/player/WhatsApp Image 2026-07-26 at 10.34.07 PM (1).png" id="1_75vfm"]
 [ext_resource type="Texture2D" uid="uid://cgbfjr3o0i1cw" path="res://scenes/player/WhatsApp Image 2026-07-27 at 1.52.33 AM.png" id="1_gmlin"]
 [ext_resource type="Texture2D" uid="uid://dlc46ocfl13u6" path="res://scenes/player/WhatsApp Image 2026-07-26 at 10.42.57 PM.jpeg.png" id="3_0owmy"]
 [ext_resource type="Texture2D" uid="uid://bvfwqdaontlvb" path="res://scenes/player/WhatsApp Image 2026-07-26 at 10.34.07 PM.png" id="4_qek5x"]
-[ext_resource type="Script" uid="uid://bg60tylnf4obs" path="res://scenes/player/statemachine.gd" id="6_0owmy"]
-[ext_resource type="Script" uid="uid://bef40fasidyna" path="res://scenes/player/idle_state.gd" id="7_qek5x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5gtgg"]
 atlas = ExtResource("1_75vfm")
@@ -102,25 +100,19 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_euojc"]
-radius = 8.062258
+radius = 15.556349
 
 [node name="player" type="CharacterBody2D" unique_id=501279140]
 script = ExtResource("1_0owmy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=6855073]
-position = Vector2(30.585938, 30.687496)
-scale = Vector2(0.1645101, 0.12768553)
+position = Vector2(10.249999, 17)
+scale = Vector2(0.43359378, 0.34765625)
 sprite_frames = SubResource("SpriteFrames_euojc")
 animation = &"walk_left"
+frame_progress = 0.35503918
+script = ExtResource("1_0owmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250590293]
-position = Vector2(28, 31)
+position = Vector2(6, 21)
 shape = SubResource("CircleShape2D_euojc")
-
-[node name="statement" type="Node" parent="." unique_id=1290942376]
-script = ExtResource("6_0owmy")
-
-[node name="idle" type="Node" parent="." unique_id=218973533 node_paths=PackedStringArray("player", "animated_sprite_2D")]
-script = ExtResource("7_qek5x")
-player = NodePath("..")
-animated_sprite_2D = NodePath("../AnimatedSprite2D")
