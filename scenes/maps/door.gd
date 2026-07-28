@@ -1,18 +1,24 @@
 extends Area2D
 
-@export var next_scene: String = "res://scenes/computerlab1.tscn"
+@export var next_scene: String = "res://scenes/maps/complab_1.tscn"
 
 var player_near = false
 
+func _ready():
+	print("script start")
+	
 func _on_body_entered(body):
-	if body.is_in_group("player"):
-		player_near = true
-
+	print("Body entered:", body.name)
+	player_near = true	
+	
 func _on_body_exited(body):
-	if body.is_in_group("player"):
-		player_near = false
-
+	print("Body exited:", body.name)
+	player_near = false
+	
 func _process(_delta):
-	if player_near and Input.is_action_just_pressed("interact"):
+	if Input.is_action_just_pressed("interact"):
 		print("E pressed")
-		get_tree().change_scene_to_file(next_scene)
+		
+	if player_near and Input.is_action_just_pressed("interact"):	
+			print("Changing scene...")	
+			get_tree().change_scene_to_file(next_scene)

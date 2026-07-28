@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dljsdsf36yc0d"]
+
+[ext_resource type="Script" uid="uid://bed6quqp854jb" path="res://canvas_layer.gd" id="1_dwofd"]
+
+[sub_resource type="Animation" id="Animation_65g2w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.039215688, 0.039215688, 0.039215688, 0.13333334)]
+}
+
+[sub_resource type="Animation" id="Animation_5wss2"]
+resource_name = "fade in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.01, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.039215688, 0.039215688, 0.039215688, 0.50980395), Color(0.039215688, 0.039215688, 0.039215688, 0.16862746)]
+}
+
+[sub_resource type="Animation" id="Animation_hjoii"]
+resource_name = "fadeOut"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.039215688, 0.039215688, 0.039215688, 0.03529412), Color(0.039215688, 0.039215688, 0.039215688, 0.5411765)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5wss2"]
+_data = {
+&"RESET": SubResource("Animation_65g2w"),
+&"fade in": SubResource("Animation_5wss2"),
+&"fadeOut": SubResource("Animation_hjoii")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1474402991]
+script = ExtResource("1_dwofd")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=119951744]
+offset_right = 1214.0
+offset_bottom = 671.0
+color = Color(0.039215688, 0.039215688, 0.039215688, 0.13333334)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=450863485]
+libraries/ = SubResource("AnimationLibrary_5wss2")

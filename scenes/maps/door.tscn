@@ -1,38 +1,36 @@
 [gd_scene format=3 uid="uid://dkyj88wi02bvu"]
 
 [ext_resource type="Script" uid="uid://dciha7n0hc66c" path="res://scenes/maps/door.gd" id="1_nggn5"]
-[ext_resource type="Texture2D" uid="uid://cnfracmwiqft" path="res://assets/environments/Restroom 32x32/Mirror.png" id="2_ihcpw"]
+[ext_resource type="Texture2D" uid="uid://cnfracmwiqft" path="res://New folder/assets/environments/Restroom 32x32/Mirror.png" id="2_ihcpw"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_nggn5"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_euojc"]
-size = Vector2(25.286217, 50.023544)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ww8"]
+size = Vector2(41, 50)
 
 [node name="door" type="Area2D" unique_id=1109102295]
 position = Vector2(311, 174)
 script = ExtResource("1_nggn5")
 metadata/_edit_horizontal_guides_ = [322.0]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2006504552]
-position = Vector2(320.98993, 0)
-scale = Vector2(-319.98993, 326.06598)
-texture = SubResource("ViewportTexture_nggn5")
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=319497778]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=83019852]
-position = Vector2(-1, 1)
-rotation = 0.35255653
-shape = SubResource("RectangleShape2D_euojc")
-
-[node name="Mirror" type="Sprite2D" parent="." unique_id=639022357]
-position = Vector2(-1.4065833, 1.7767801)
-rotation = 0.28274333
-scale = Vector2(0.61075133, 1.4694926)
-texture = ExtResource("2_ihcpw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=898658442]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=898658442]
+light_mask = 7
+visibility_layer = 7
+z_index = 1
 position = Vector2(-2190.0002, -241)
 scale = Vector2(2.299981, 0.6101203)
 polygon = PackedVector2Array(950.87756, 355.66754, 945.22534, 432.70154, 952.1819, 439.25763, 957.8341, 365.5017)
+
+[node name="Mirror" type="Sprite2D" parent="StaticBody2D" unique_id=639022357]
+position = Vector2(-1.4064941, 1.7767792)
+rotation = 0.2827433
+scale = Vector2(0.61075133, 1.4694927)
+texture = ExtResource("2_ihcpw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=442388884]
+z_index = -1
+position = Vector2(1.5, 2)
+shape = SubResource("RectangleShape2D_c8ww8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
