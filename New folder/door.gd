@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var next_scene: String = "res://scenes/maps/complab_1.tscn"
+@export var next_scene: String = "res://scenes/maps/library.tscn"
 
 var player_near = false
 

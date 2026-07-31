@@ -106,13 +106,14 @@ radius = 8.062258
 [node name="player" type="CharacterBody2D" unique_id=501279140]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=6855073]
-position = Vector2(30.585938, 30.687496)
+position = Vector2(7.000002, 1.0000019)
 scale = Vector2(0.1645101, 0.12768553)
 sprite_frames = SubResource("SpriteFrames_euojc")
 animation = &"walk_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250590293]
-position = Vector2(28, 31)
+visible = false
+position = Vector2(3, 3)
 shape = SubResource("CircleShape2D_euojc")
 
 [node name="statement" type="Node" parent="." unique_id=1290942376]

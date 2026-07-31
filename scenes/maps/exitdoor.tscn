@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bowys7vv8d26y"]
+
+[ext_resource type="PackedScene" uid="uid://dkyj88wi02bvu" path="res://scenes/maps/door.tscn" id="1_q2rof"]
+[ext_resource type="Script" uid="uid://bjcctxsc1r5jq" path="res://exit.gd" id="2_s4huf"]
+
+[node name="exitdoor" unique_id=212619072 instance=ExtResource("1_q2rof")]
+scale = Vector2(4, 4)
+script = ExtResource("2_s4huf")
+
+[node name="Sprite2D" parent="StaticBody2D" parent_id_path=PackedInt32Array(278695778) index="0" unique_id=1887870946]
+position = Vector2(-0.24999818, -0.37500337)
+scale = Vector2(0.10531135, 0.022200776)
+
+[node name="CollisionPolygon2D" parent="StaticBody2D" parent_id_path=PackedInt32Array(278695778) index="1" unique_id=178545826]
+visible = false
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1956065301]
+visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
