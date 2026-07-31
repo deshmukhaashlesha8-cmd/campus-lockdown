@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dfe1hdelkfnbn" path="res://scenes/maps/WhatsApp Image 2026-07-27 at 1.48.36 PM.jpeg" id="1_sa2wd"]
 [ext_resource type="PackedScene" uid="uid://c0pjp2g0gh0x1" path="res://scenes/player/player.tscn" id="2_cx6uu"]
+[ext_resource type="Script" uid="uid://d3fo2lf5v1csc" path="res://scenes/player/playerA.gd" id="3_cx6uu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abihx"]
 texture = ExtResource("1_sa2wd")
@@ -4173,6 +4174,9 @@ tile_set = SubResource("TileSet_euojc")
 [node name="player" parent="TileMapLayer" unique_id=501279140 instance=ExtResource("2_cx6uu")]
 position = Vector2(371, 663)
 scale = Vector2(4, 4)
+script = ExtResource("3_cx6uu")
+
+[node name="Camera2D" type="Camera2D" parent="TileMapLayer/player" unique_id=1725831891]
 
 [node name="collide" type="StaticBody2D" parent="." unique_id=1897005305]
 

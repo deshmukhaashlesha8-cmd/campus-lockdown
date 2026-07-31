@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c0pjp2g0gh0x1" path="res://scenes/player/player.tscn" id="1_803r6"]
 [ext_resource type="Texture2D" uid="uid://c24jw6jwgrkas" path="res://scenes/maps/7d88b3c1-af4e-434b-b99e-9dfbc63cac0e.png" id="1_gm1tu"]
 [ext_resource type="Texture2D" uid="uid://5hp2cstg25a1" path="res://scenes/maps/WhatsApp Image 2026-07-27 at 9.01.15 PM.jpeg" id="2_e2vyo"]
+[ext_resource type="Script" uid="uid://eawfw13ps2fb" path="res://scenes/player/player.gd" id="5_rcqsm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcqsm"]
 texture = ExtResource("1_gm1tu")
@@ -9570,6 +9571,8 @@ sources/0 = SubResource("TileSetAtlasSource_rcqsm")
 sources/1 = SubResource("TileSetAtlasSource_g1uoy")
 
 [node name="complab1" type="Node2D" unique_id=1009185928]
+position = Vector2(279, 829)
+rotation = -1.5707964
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1776321626]
 position = Vector2(48, -2)
@@ -9578,12 +9581,18 @@ tile_set = SubResource("TileSet_88xuk")
 
 [node name="player" parent="." unique_id=501279140 instance=ExtResource("1_803r6")]
 z_index = 1
-position = Vector2(152.00006, 84.00003)
-scale = Vector2(3, 3)
+position = Vector2(310, 78.00001)
+rotation = 1.5707964
+scale = Vector2(4, 4)
 motion_mode = 1
 up_direction = Vector2(0.91003895, 0.41452274)
+script = ExtResource("5_rcqsm")
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=131127912]
 
 [node name="collide" type="StaticBody2D" parent="." unique_id=46446199]
+position = Vector2(-623.00006, 1659)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collide" unique_id=1382303704]
+position = Vector2(632.00006, -1647)
 polygon = PackedVector2Array(63, 204, 157, 271, 148, 933, 1083, 930, 1087, -160, 139, -148, 172, 61, 133, 64, 60, -48, 51, -270, 1290, -270, 1278, 1113, 17, 1100)
