@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c0pjp2g0gh0x1" path="res://scenes/player/player.tscn" id="3_j07a3"]
 [ext_resource type="Script" uid="uid://qbx8wuntqw8l" path="res://scenes/player/playerL.gd" id="4_1i4he"]
 [ext_resource type="PackedScene" uid="uid://bowys7vv8d26y" path="res://scenes/maps/exitdoor.tscn" id="5_2p5y5"]
+[ext_resource type="Script" uid="uid://b6olh8a84412w" path="res://scenes/maps/reversetrigger.gd" id="6_8dvak"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i4he"]
 texture = ExtResource("1_dicfq")
@@ -9759,6 +9760,9 @@ texture = ExtResource("3_2p5y5")
 sources/0 = SubResource("TileSetAtlasSource_1i4he")
 sources/2 = SubResource("TileSetAtlasSource_8dvak")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euojc"]
+size = Vector2(123, 119)
+
 [node name="library" type="Node2D" unique_id=1541895993]
 
 [node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("5_2p5y5")]
@@ -9786,3 +9790,10 @@ position = Vector2(109, 595)
 visible = false
 position = Vector2(-7, -732)
 polygon = PackedVector2Array(380, 740, 385, 858, -14, 865, -36, 782, -24, -96, 1029, -96, 1026, 856, 625, 840, 611, 742, 963, 749, 969, -11, 34, -20, 36, 753)
+
+[node name="reversetrigger" type="Area2D" parent="." unique_id=2142796266]
+script = ExtResource("6_8dvak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reversetrigger" unique_id=1464877397]
+position = Vector2(270.5, -147.5)
+shape = SubResource("RectangleShape2D_euojc")
