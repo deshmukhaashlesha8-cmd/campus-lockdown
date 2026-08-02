@@ -4,6 +4,7 @@ extends Node
 @export var player: CharacterBody2D
 @export var animated_sprite_2D: AnimatedSprite2D
 
+
 var direction: Vector2 = Vector2.ZERO
 
 const SPEED = 150.0

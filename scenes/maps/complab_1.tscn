@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://5hp2cstg25a1" path="res://scenes/maps/WhatsApp Image 2026-07-27 at 9.01.15 PM.jpeg" id="2_e2vyo"]
 [ext_resource type="PackedScene" uid="uid://bowys7vv8d26y" path="res://scenes/maps/exitdoor.tscn" id="5_g1uoy"]
 [ext_resource type="Script" uid="uid://eawfw13ps2fb" path="res://scenes/player/player.gd" id="5_rcqsm"]
+[ext_resource type="Texture2D" uid="uid://dlw5rf4fpyfmt" path="res://scenes/maps/upscalemedia-transformed.png" id="6_uackb"]
+[ext_resource type="Texture2D" uid="uid://mf3om0wengn7" path="res://scenes/maps/blackboard.cl.png" id="7_8ad4l"]
+[ext_resource type="Texture2D" uid="uid://cm74dgqvg0i72" path="res://scenes/maps/erasebg-transformed (2).png" id="8_grgus"]
+[ext_resource type="Texture2D" uid="uid://cgy2ssl55w72c" path="res://scenes/maps/erasebg-transformed (1).png" id="9_jy42y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcqsm"]
 texture = ExtResource("1_gm1tu")
@@ -9571,6 +9575,58 @@ texture = ExtResource("2_e2vyo")
 sources/0 = SubResource("TileSetAtlasSource_rcqsm")
 sources/1 = SubResource("TileSetAtlasSource_g1uoy")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwgoj"]
+atlas = ExtResource("6_uackb")
+region = Rect2(0, 0, 1882, 1882)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6btkf"]
+atlas = ExtResource("6_uackb")
+region = Rect2(0, 0, 1882, 1882)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_euojc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwgoj")
+}],
+"loop": 1,
+"name": &"chair",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6btkf")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation_1",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation_2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation_3",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation_4",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation_5",
+"speed": 5.0
+}]
+
 [node name="complab1" type="Node2D" unique_id=1009185928]
 position = Vector2(279, 829)
 rotation = -1.5707964
@@ -9597,8 +9653,62 @@ script = ExtResource("5_rcqsm")
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=131127912]
 
 [node name="collide" type="StaticBody2D" parent="." unique_id=46446199]
+visible = false
 position = Vector2(-623.00006, 1659)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collide" unique_id=1382303704]
 position = Vector2(632.00006, -1647)
 polygon = PackedVector2Array(63, 204, 157, 271, 148, 933, 1083, 930, 1087, -160, 139, -148, 172, 61, 133, 64, 60, -48, 51, -270, 1290, -270, 1278, 1113, 17, 1100)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1624269956]
+position = Vector2(306.99997, 412)
+scale = Vector2(0.15858334, 0.13384767)
+sprite_frames = SubResource("SpriteFrames_euojc")
+animation = &"new_animation"
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1553142180]
+texture = ExtResource("6_uackb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="AnimatedSprite2D" unique_id=266564809]
+
+[node name="Sprite2D3" type="Sprite2D" parent="AnimatedSprite2D" unique_id=266019315]
+
+[node name="Node" type="Node" parent="." unique_id=1606988496]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node" unique_id=452063065]
+position = Vector2(120.4429, 282.71887)
+rotation = -1.5707964
+scale = Vector2(1.4783589, 0.6978516)
+texture = ExtResource("7_8ad4l")
+region_enabled = true
+region_rect = Rect2(424.0803, 110.16009, 380.96964, 138.16013)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node/Sprite2D" unique_id=449885644]
+position = Vector2(231.95627, 712.99854)
+scale = Vector2(0.27910277, 0.5484516)
+texture = ExtResource("8_grgus")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node/Sprite2D" unique_id=568857853]
+position = Vector2(-132.61752, 707.28766)
+scale = Vector2(0.25842005, 0.5218505)
+texture = ExtResource("8_grgus")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node/Sprite2D" unique_id=1972745074]
+position = Vector2(235.73257, 1209.8219)
+scale = Vector2(0.2648287, 0.5945305)
+texture = ExtResource("8_grgus")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node/Sprite2D" unique_id=401397545]
+position = Vector2(-124.5561, 1213.9165)
+scale = Vector2(0.2693313, 0.5826871)
+texture = ExtResource("8_grgus")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node/Sprite2D" unique_id=1890422244]
+position = Vector2(277.68747, 319.34015)
+rotation = -3.104632
+scale = Vector2(0.2934839, 0.5076755)
+skew = -0.028721333
+texture = ExtResource("9_jy42y")
+region_enabled = true
+region_rect = Rect2(0, 0, 728.74615, 654.50073)
