@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://buarpcgvmv2ec"]
+
+[ext_resource type="Script" uid="uid://be7giq135mp3r" path="res://scenes/maps/control.gd" id="1_n6lf2"]
+[ext_resource type="Script" uid="uid://chwjbeguaayuk" path="res://button.gd" id="1_sv8hj"]
+
+[node name="main menu" type="Control" unique_id=315284014]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n6lf2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1957913610]
+
+[node name="Start" type="Button" parent="CanvasLayer" unique_id=447749941]
+offset_left = 272.0
+offset_top = 197.0
+offset_right = 488.0
+offset_bottom = 255.0
+
+[node name="Quit" type="Button" parent="CanvasLayer" unique_id=488118158]
+offset_left = 269.0
+offset_top = 122.0
+offset_right = 484.0
+offset_bottom = 177.0
+
+[node name="pause" type="Button" parent="CanvasLayer" unique_id=1222334866]
+process_mode = 2
+offset_left = 992.0
+offset_top = 528.0
+offset_right = 1082.0
+offset_bottom = 572.0
+text = "menu"
+script = ExtResource("1_sv8hj")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=2019955319]
+offset_left = 307.0
+offset_top = 71.0
+offset_right = 456.0
+offset_bottom = 102.0
+text = "campus lockdown"
+
+[connection signal="pressed" from="CanvasLayer/pause" to="CanvasLayer/pause" method="_on_pressed"]

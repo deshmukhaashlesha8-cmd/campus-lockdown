@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="campus lockdown"
-run/main_scene="uid://bqwic1sy4upr4"
+run/main_scene="uid://bt6mulo6qmqa2"
+run/print_header=false
 config/features=PackedStringArray("4.7", "Forward Plus")
+
+[autoload]
+
+SceneTransition="*uid://yfnth3mihs5x"
 
 [display]
 

@@ -1,21 +1,36 @@
 [gd_scene format=3 uid="uid://bowys7vv8d26y"]
 
-[ext_resource type="PackedScene" uid="uid://dkyj88wi02bvu" path="res://scenes/maps/door.tscn" id="1_q2rof"]
-[ext_resource type="Script" uid="uid://bjcctxsc1r5jq" path="res://exit.gd" id="2_s4huf"]
+[ext_resource type="Script" uid="uid://wk4sjftk8hi7" path="res://scripts/classScript/exitt.gd" id="1_q2rof"]
+[ext_resource type="Texture2D" uid="uid://cbkdptq3d5x77" path="res://scenes/maps/Screenshot 2026-07-31 170628.png" id="2_s4huf"]
 
-[node name="exitdoor" unique_id=212619072 instance=ExtResource("1_q2rof")]
-scale = Vector2(4, 4)
-script = ExtResource("2_s4huf")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihcpw"]
+size = Vector2(219, 80)
 
-[node name="Sprite2D" parent="StaticBody2D" parent_id_path=PackedInt32Array(278695778) index="0" unique_id=1887870946]
-position = Vector2(-0.24999818, -0.37500337)
-scale = Vector2(0.10531135, 0.022200776)
+[node name="exitdoor" type="Area2D" unique_id=212619072]
+position = Vector2(430, 132)
+script = ExtResource("1_q2rof")
+metadata/_edit_horizontal_guides_ = [322.0]
 
-[node name="CollisionPolygon2D" parent="StaticBody2D" parent_id_path=PackedInt32Array(278695778) index="1" unique_id=178545826]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=278695778]
+position = Vector2(20, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1887870946]
+position = Vector2(2.503395e-06, -3.5762787e-07)
+scale = Vector2(0.5, 0.109)
+texture = ExtResource("2_s4huf")
+region_enabled = true
+region_rect = Rect2(49.290955, 15.651749, 441.89404, 751.21985)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=178545826]
 visible = false
+position = Vector2(-4.0000076, 1.2392833)
+scale = Vector2(0.8958333, 0.6638763)
+polygon = PackedVector2Array(-118.32559, -45.549576, -118.32559, 58.385452, 128.3721, 59.89174, 126.13956, -47.055878)
 
-[node name="CollisionShape2D" parent="." index="1" unique_id=1956065301]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1956065301]
 visible = false
+position = Vector2(19.49997, 3)
+shape = SubResource("RectangleShape2D_ihcpw")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

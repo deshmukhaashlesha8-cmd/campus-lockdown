@@ -14,4 +14,4 @@ func _on_body_exited(body):
 
 func _process(_delta):
 	if player_near and Input.is_action_just_pressed("interact"):
-		get_tree().change_scene_to_file(next_scene)
+		SceneTransition.fade_to_scene(next_scene)

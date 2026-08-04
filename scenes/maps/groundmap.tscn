@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c0pjp2g0gh0x1" path="res://scenes/player/player.tscn" id="1_omtfk"]
 [ext_resource type="Script" uid="uid://db8iis4gtrlog" path="res://scripts/classScript/comp.gd" id="3_g3n7f"]
 [ext_resource type="PackedScene" uid="uid://dkyj88wi02bvu" path="res://scenes/maps/door.tscn" id="3_uldgt"]
+[ext_resource type="Script" uid="uid://b8dvne2v2d5l0" path="res://scenes/maps/cdoor.gd" id="4_k6vc2"]
 [ext_resource type="Script" uid="uid://c8pmyyw8iisok" path="res://scenes/player/playerr.gd" id="4_od4o5"]
 [ext_resource type="Script" uid="uid://bc24iv4bvjadt" path="res://scripts/classScript/adminD.gd" id="4_qhs7t"]
 [ext_resource type="Texture2D" uid="uid://5hp2cstg25a1" path="res://scenes/maps/WhatsApp Image 2026-07-27 at 9.01.15 PM.jpeg" id="5_qhs7t"]
@@ -3537,7 +3538,7 @@ texture = ExtResource("5_qhs7t")
 sources/0 = SubResource("TileSetAtlasSource_a0n26")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euojc"]
-size = Vector2(42, 20)
+size = Vector2(41, 15)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_euojc"]
 
@@ -3551,19 +3552,32 @@ tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD+////AAAAAAEAAAD+/wAAAAAAAAI
 tile_set = SubResource("TileSet_c8ww8")
 
 [node name="door" parent="gameTilemap" unique_id=1109102295 instance=ExtResource("3_uldgt")]
-position = Vector2(749.99994, 328)
+position = Vector2(751.99994, 327.00006)
 rotation = 2.162463
+scale = Vector2(0.9, 0.9)
 collision_mask = 3
 audio_bus_override = true
 script = ExtResource("3_g3n7f")
 
+[node name="class1" parent="gameTilemap" unique_id=212619072 instance=ExtResource("3_uldgt")]
+position = Vector2(499, 356.99997)
+rotation = -2.0943952
+scale = Vector2(0.9, 0.9)
+script = ExtResource("4_k6vc2")
+
 [node name="library" parent="gameTilemap" unique_id=378668904 instance=ExtResource("3_uldgt")]
-position = Vector2(460.99997, 120.99997)
+position = Vector2(460.99997, 119.99997)
 script = ExtResource("8_k6vc2")
 
-[node name="office" parent="gameTilemap" unique_id=212619072 instance=ExtResource("3_uldgt")]
-position = Vector2(593, 122)
+[node name="office" parent="gameTilemap" unique_id=54190328 instance=ExtResource("3_uldgt")]
+position = Vector2(593, 123)
 script = ExtResource("7_g3n7f")
+
+[node name="class2" parent="gameTilemap" unique_id=1611106385 instance=ExtResource("3_uldgt")]
+position = Vector2(452.00003, 284.00003)
+rotation = -2.0943952
+scale = Vector2(0.9, 0.9)
+script = ExtResource("4_k6vc2")
 
 [node name="adminD" type="Area2D" parent="gameTilemap" unique_id=1277608559]
 position = Vector2(715, 130)
@@ -3576,16 +3590,18 @@ position = Vector2(3, -4)
 position = Vector2(44.999985, 2)
 scale = Vector2(0.09890114, 0.024453022)
 texture = ExtResource("6_813nq")
+region_enabled = true
+region_rect = Rect2(52.052795, 18.41359, 436.37036, 748.458)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gameTilemap/adminD/StaticBody2D" unique_id=1858680408]
 visible = false
 position = Vector2(40.000023, 5.9999943)
 scale = Vector2(0.8958333, 0.8645833)
-polygon = PackedVector2Array(-25, -12, -27.406921, 3.9325256, 36.22101, 2.7758942, 32.87213, -12.260254)
+polygon = PackedVector2Array(-15.62793, -12.7229, -17.860474, 0, 26.79071, 0, 26.79071, -12.7229)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gameTilemap/adminD" unique_id=323633003]
 visible = false
-position = Vector2(46, -2)
+position = Vector2(46.5, -4.5)
 shape = SubResource("RectangleShape2D_euojc")
 
 [node name="player" parent="gameTilemap" unique_id=501279140 instance=ExtResource("1_omtfk")]
@@ -3675,9 +3691,13 @@ polygon = PackedVector2Array(673, 153, 673, 183, 685, 181, 702, 195, 567, 401, 5
 
 [connection signal="body_entered" from="gameTilemap/door" to="gameTilemap/door" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/door" to="gameTilemap/door" method="_on_body_exited"]
+[connection signal="body_entered" from="gameTilemap/class1" to="gameTilemap/class1" method="_on_body_entered"]
+[connection signal="body_exited" from="gameTilemap/class1" to="gameTilemap/class1" method="_on_body_exited"]
 [connection signal="body_entered" from="gameTilemap/library" to="gameTilemap/library" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/library" to="gameTilemap/library" method="_on_body_exited"]
 [connection signal="body_entered" from="gameTilemap/office" to="gameTilemap/office" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/office" to="gameTilemap/office" method="_on_body_exited"]
+[connection signal="body_entered" from="gameTilemap/class2" to="gameTilemap/class2" method="_on_body_entered"]
+[connection signal="body_exited" from="gameTilemap/class2" to="gameTilemap/class2" method="_on_body_exited"]
 [connection signal="body_entered" from="gameTilemap/adminD" to="gameTilemap/adminD" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/adminD" to="gameTilemap/adminD" method="_on_body_exited"]

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bt6mulo6qmqa2"]
+
+[ext_resource type="Script" uid="uid://be7giq135mp3r" path="res://scenes/maps/control.gd" id="1_4rqo4"]
+
+[node name="main menu" type="Control" unique_id=315284014]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4rqo4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1957913610]
+
+[node name="Start" type="Button" parent="CanvasLayer" unique_id=447749941]
+offset_left = 483.0
+offset_top = 260.0
+offset_right = 699.0
+offset_bottom = 318.0
+text = "Start"
+
+[node name="Quit" type="Button" parent="CanvasLayer" unique_id=488118158]
+offset_left = 485.0
+offset_top = 339.0
+offset_right = 700.0
+offset_bottom = 394.0
+text = "Quit"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=2019955319]
+offset_left = 524.0
+offset_top = 203.0
+offset_right = 663.0
+offset_bottom = 226.0
+text = "campus lockdown"
+
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
