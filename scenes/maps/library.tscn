@@ -9791,6 +9791,32 @@ visible = false
 position = Vector2(-7, -732)
 polygon = PackedVector2Array(380, 740, 385, 858, -14, 865, -36, 782, -24, -96, 1029, -96, 1026, 856, 625, 840, 611, 742, 963, 749, 969, -11, 34, -20, 36, 753)
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=802051056]
+polygon = PackedVector2Array(215, -438, 217, -337, 425, -338, 431, -435)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=957787538]
+polygon = PackedVector2Array(215, -438, 217, -337, 425, -338, 431, -435)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=417203252]
+polygon = PackedVector2Array(521, -435, 523, -334, 731, -335, 737, -432)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2137722688]
+position = Vector2(0, 2)
+polygon = PackedVector2Array(218, -237, 220, -136, 428, -137, 434, -234)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=106441311]
+position = Vector2(0, 1)
+polygon = PackedVector2Array(533, -235, 535, -134, 743, -135, 749, -232)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=936012900]
+polygon = PackedVector2Array(183, -642, 183, -514, 457, -512, 457, -642)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=409219129]
+polygon = PackedVector2Array(511, -645, 511, -515, 787, -515, 784, -640)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1885392637]
+polygon = PackedVector2Array(632, -794, 628, -645, 750, -642, 747, -799)
+
 [node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("5_2p5y5")]
 position = Vector2(571, 666)
 scale = Vector2(1.2, 1.2)
