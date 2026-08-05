@@ -6199,10 +6199,25 @@ script = ExtResource("3_cx6uu")
 position = Vector2(2.0454407, 2.272728)
 
 [node name="collide" type="StaticBody2D" parent="." unique_id=1897005305]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collide" unique_id=1872643839]
 polygon = PackedVector2Array(489, 717, 495, 822, 58, 805, 58, -162, 1160, -159, 1160, 819, 713, 808, 707, 706, 1088, 708, 1097, -84, 119, -84, 125, 711)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="collide" unique_id=569158194]
+polygon = PackedVector2Array(432, 17, 439, 208, 834, 209, 841, 15)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="collide" unique_id=731320830]
+polygon = PackedVector2Array(370, -54, 336, -9, 356, 46, 406, 55, 424, 2)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="collide" unique_id=453793211]
+polygon = PackedVector2Array(143, -158, 146, 65, 316, 61, 327, -158)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="collide" unique_id=1652037265]
+polygon = PackedVector2Array(168, 459, 174, 615, 431, 615, 440, 461)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="collide" unique_id=818029]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(997, -65, 1009, 91, 1075, 97, 1076, -60)
 
 [node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("4_abihx")]
 position = Vector2(577, 759)
