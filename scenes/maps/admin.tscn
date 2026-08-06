@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://da1q0ds8pdoxi" path="res://assets/erasebg-transformed (1).png" id="6_mkw7v"]
 [ext_resource type="Texture2D" uid="uid://bjjaa42ywg3rw" path="res://scenes/maps/erasebg-transformed.png" id="7_jahpa"]
 [ext_resource type="Texture2D" uid="uid://b2hqehwvewrh8" path="res://scenes/maps/7d307ec8-34c7-46a7-825d-e611da5c1908.png" id="8_mkw7v"]
+[ext_resource type="Script" uid="uid://dvntlfko1rlte" path="res://scripts/classScript/Interactable.gd" id="9_jahpa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8lf80"]
 texture = ExtResource("1_abihx")
@@ -6181,6 +6182,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euojc"]
+size = Vector2(300, 219)
+
 [node name="admin" type="Node2D" unique_id=148091172]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=976801865]
@@ -6190,7 +6194,7 @@ tile_map_data = PackedByteArray("AAD///3/AABCAAAAAAD///7/AQAYAAAAAAD/////AQAYAAE
 tile_set = SubResource("TileSet_euojc")
 collision_visibility_mode = 1
 
-[node name="player" parent="TileMapLayer" unique_id=501279140 instance=ExtResource("2_cx6uu")]
+[node name="player" parent="TileMapLayer" unique_id=501279140 groups=["player"] instance=ExtResource("2_cx6uu")]
 position = Vector2(354.6365, 702.0909)
 scale = Vector2(3.1, 3.1)
 script = ExtResource("3_cx6uu")
@@ -6199,6 +6203,8 @@ script = ExtResource("3_cx6uu")
 position = Vector2(2.0454407, 2.272728)
 
 [node name="collide" type="StaticBody2D" parent="." unique_id=1897005305]
+visible = false
+metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collide" unique_id=1872643839]
 polygon = PackedVector2Array(489, 717, 495, 822, 58, 805, 58, -162, 1160, -159, 1160, 819, 713, 808, 707, 706, 1088, 708, 1097, -84, 119, -84, 125, 711)
@@ -6231,7 +6237,7 @@ region_enabled = true
 region_rect = Rect2(990.5499, 141.3761, 112.107544, 215.19067)
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2076679892]
-position = Vector2(299.00003, 536)
+position = Vector2(297, 536.00006)
 scale = Vector2(0.4536713, 0.43272114)
 texture = ExtResource("6_mkw7v")
 region_enabled = true
@@ -6272,3 +6278,10 @@ scale = Vector2(0.8945946, 0.7835821)
 texture = ExtResource("8_mkw7v")
 region_enabled = true
 region_rect = Rect2(464.1977, 56.296616, 555.1294, 469.5124)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1292580353]
+script = ExtResource("9_jahpa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1899914515]
+position = Vector2(317, 535.5)
+shape = SubResource("RectangleShape2D_euojc")

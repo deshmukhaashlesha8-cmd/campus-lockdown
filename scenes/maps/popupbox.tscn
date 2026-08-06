@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d1cebbn4o1jt5"]
+
+[ext_resource type="Script" uid="uid://bcwf8sgk1vfst" path="res://scenes/maps/popupbox.gd" id="1_5lcwx"]
+
+[node name="popupbox" type="CanvasLayer" unique_id=1055576107]
+script = ExtResource("1_5lcwx")
+
+[node name="Control" type="Control" parent="." unique_id=2053607182]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -12.0
+offset_top = 441.0
+offset_right = 219.0
+offset_bottom = 651.0
+
+[node name="Label" type="Label" parent="Control" unique_id=931904645]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 97.0
+offset_right = 138.0
+offset_bottom = 130.0
+text = "heloooo"

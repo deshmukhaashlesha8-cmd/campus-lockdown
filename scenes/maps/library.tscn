@@ -9783,8 +9783,15 @@ script = ExtResource("4_1i4he")
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=114792204]
 position = Vector2(2.3333335, -1)
 
+[node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("5_2p5y5")]
+z_index = 6
+position = Vector2(571, 666)
+scale = Vector2(1.2, 1.2)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=440035390]
+visible = false
 position = Vector2(109, 595)
+metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1594127652]
 visible = false
@@ -9816,10 +9823,6 @@ polygon = PackedVector2Array(511, -645, 511, -515, 787, -515, 784, -640)
 
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1885392637]
 polygon = PackedVector2Array(632, -794, 628, -645, 750, -642, 747, -799)
-
-[node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("5_2p5y5")]
-position = Vector2(571, 666)
-scale = Vector2(1.2, 1.2)
 
 [node name="reversetrigger" type="Area2D" parent="." unique_id=2142796266]
 script = ExtResource("6_8dvak")

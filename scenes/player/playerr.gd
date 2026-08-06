@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var reversed_controls = false
-const SPEED = 100.0
+const SPEED = 70.0
 
 func _physics_process(_delta):
 
