@@ -32,7 +32,7 @@ offset_bottom = 458.0
 text = "Quit"
 
 [node name="WhatsAppImage20260805At11_29_26Am" type="Sprite2D" parent="." unique_id=2140073824]
-position = Vector2(600, 329)
+position = Vector2(608, 336.99997)
 scale = Vector2(0.8397791, 0.60589314)
 texture = ExtResource("2_pmeri")
 
