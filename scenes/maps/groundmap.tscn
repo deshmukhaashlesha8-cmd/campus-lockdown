@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c0pjp2g0gh0x1" path="res://scenes/player/player.tscn" id="1_omtfk"]
 [ext_resource type="Script" uid="uid://db8iis4gtrlog" path="res://scripts/classScript/comp.gd" id="3_g3n7f"]
+[ext_resource type="Texture2D" uid="uid://c5vumnys1bmpv" path="res://assets/idfk.png" id="3_q8nhn"]
 [ext_resource type="PackedScene" uid="uid://dkyj88wi02bvu" path="res://scenes/maps/door.tscn" id="3_uldgt"]
 [ext_resource type="Script" uid="uid://b8dvne2v2d5l0" path="res://scenes/maps/cdoor.gd" id="4_k6vc2"]
 [ext_resource type="Script" uid="uid://c8pmyyw8iisok" path="res://scenes/player/playerr.gd" id="4_od4o5"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cbkdptq3d5x77" path="res://scenes/maps/Screenshot 2026-07-31 170628.png" id="6_813nq"]
 [ext_resource type="Script" uid="uid://bxbtx872ybhfc" path="res://scripts/classScript/officeD (2).gd" id="7_g3n7f"]
 [ext_resource type="Script" uid="uid://s65hy1jld3hp" path="res://scripts/classScript/library.gd" id="8_k6vc2"]
+[ext_resource type="Script" uid="uid://tq0vi2stdxyb" path="res://scenes/maps/key.gd" id="11_rm454"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0n26"]
 texture = ExtResource("5_qhs7t")
@@ -3540,6 +3542,9 @@ sources/0 = SubResource("TileSetAtlasSource_a0n26")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euojc"]
 size = Vector2(41, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7optt"]
+size = Vector2(38, 48)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_euojc"]
 
 [node name="ground" type="Node2D" unique_id=981643251]
@@ -3609,6 +3614,20 @@ shape = SubResource("RectangleShape2D_euojc")
 z_index = 1
 position = Vector2(611, 604)
 script = ExtResource("4_od4o5")
+
+[node name="AdminKey" type="Area2D" parent="gameTilemap" unique_id=42080179]
+position = Vector2(531, 497)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("11_rm454")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gameTilemap/AdminKey" unique_id=44683992]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_7optt")
+
+[node name="Sprite2D" type="Sprite2D" parent="gameTilemap/AdminKey" unique_id=1395544961]
+texture = ExtResource("3_q8nhn")
+region_enabled = true
+region_rect = Rect2(384.46405, 193.92801, 30.976013, 45.496002)
 
 [node name="collide" type="Node" parent="gameTilemap" unique_id=92529541]
 
@@ -3708,3 +3727,4 @@ polygon = PackedVector2Array(486, 3, 488, 33, 328, 37, 327, 99, 350, 133, 401, 1
 [connection signal="body_exited" from="gameTilemap/class2" to="gameTilemap/class2" method="_on_body_exited"]
 [connection signal="body_entered" from="gameTilemap/adminD" to="gameTilemap/adminD" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/adminD" to="gameTilemap/adminD" method="_on_body_exited"]
+[connection signal="body_entered" from="gameTilemap/AdminKey" to="gameTilemap/AdminKey" method="_on_body_entered"]

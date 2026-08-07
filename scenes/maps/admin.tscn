@@ -6225,7 +6225,7 @@ polygon = PackedVector2Array(168, 459, 174, 615, 431, 615, 440, 461)
 position = Vector2(0, -1)
 polygon = PackedVector2Array(997, -65, 1009, 91, 1075, 97, 1076, -60)
 
-[node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("4_abihx")]
+[node name="admindoor" parent="." unique_id=212619072 instance=ExtResource("4_abihx")]
 position = Vector2(577, 759)
 scale = Vector2(1.1, 1.1)
 

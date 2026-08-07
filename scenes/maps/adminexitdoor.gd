@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var next_scene: String = "res://scenes/maps/admin.tscn"
+@export var next_scene: String
 
 var player_near = false
 
@@ -12,9 +12,10 @@ func _process(delta):
 			print("Lab is locked. Find the key first.")
 
 func _on_body_entered(body):
-	if body.name == "player":
+	if body.name == "Player":
 		player_near = true
 
 func _on_body_exited(body):
-	if body.name == "player":
+	if body.name == "Player":
 		player_near = false
+		
