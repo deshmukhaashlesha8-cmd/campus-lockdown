@@ -9685,6 +9685,7 @@ script = ExtResource("4_od4o5")
 [node name="collide" type="Node" parent="gameTilemap" unique_id=92529541]
 
 [node name="grd" type="StaticBody2D" parent="gameTilemap/collide" unique_id=2028006250]
+visible = false
 position = Vector2(0, 25)
 scale = Vector2(0.8, 0.8)
 
@@ -9705,6 +9706,9 @@ polygon = PackedVector2Array(743.2998, 94.891655, 350.03488, 115.01093, 741, 124
 position = Vector2(0, -31.249996)
 scale = Vector2(1.2499999, 1.2499999)
 polygon = PackedVector2Array(-28, 625, 513, 625, 512, 601, -31, 594)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="gameTilemap/collide/grd" unique_id=694009362]
+polygon = PackedVector2Array(801.24994, 719.99994, 799.99994, 748.74994, 1559.9999, 754.99994, 1559.9999, 721.24994)
 
 [node name="entrance" type="StaticBody2D" parent="gameTilemap/collide" unique_id=1074791323]
 visible = false
