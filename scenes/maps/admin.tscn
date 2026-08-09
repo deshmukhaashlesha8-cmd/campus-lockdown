@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://da1q0ds8pdoxi" path="res://assets/erasebg-transformed (1).png" id="6_mkw7v"]
 [ext_resource type="Texture2D" uid="uid://bjjaa42ywg3rw" path="res://scenes/maps/erasebg-transformed.png" id="7_jahpa"]
 [ext_resource type="Texture2D" uid="uid://b2hqehwvewrh8" path="res://scenes/maps/7d307ec8-34c7-46a7-825d-e611da5c1908.png" id="8_mkw7v"]
-[ext_resource type="Script" uid="uid://dvntlfko1rlte" path="res://scripts/classScript/Interactable.gd" id="9_jahpa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8lf80"]
 texture = ExtResource("1_abihx")
@@ -6183,9 +6182,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_euojc"]
-size = Vector2(300, 219)
-
 [node name="admin" type="Node2D" unique_id=148091172]
 
 [node name="ChatGptImageAug7,2026,103914Pm" type="Sprite2D" parent="." unique_id=669332607]
@@ -6201,12 +6197,13 @@ tile_map_data = PackedByteArray("AAD///3/AABCAAAAAAD///7/AQAYAAAAAAD/////AQAYAAE
 tile_set = SubResource("TileSet_euojc")
 collision_visibility_mode = 1
 
-[node name="player" parent="TileMapLayer" unique_id=501279140 groups=["player"] instance=ExtResource("2_cx6uu")]
-position = Vector2(354.6365, 702.0909)
-scale = Vector2(3.1, 3.1)
+[node name="player" parent="." unique_id=501279140 groups=["player"] instance=ExtResource("2_cx6uu")]
+z_index = 2
+position = Vector2(605, 682)
+scale = Vector2(3.41, 3.41)
 script = ExtResource("3_cx6uu")
 
-[node name="Camera2D" type="Camera2D" parent="TileMapLayer/player" unique_id=1725831891]
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1725831891]
 position = Vector2(2.0454407, 2.272728)
 
 [node name="collide" type="StaticBody2D" parent="." unique_id=1897005305]
@@ -6233,6 +6230,7 @@ position = Vector2(0, -1)
 polygon = PackedVector2Array(997, -65, 1009, 91, 1075, 97, 1076, -60)
 
 [node name="admindoor" parent="." unique_id=212619072 instance=ExtResource("4_abihx")]
+z_index = 2
 position = Vector2(588.99994, 756)
 scale = Vector2(1.1, 1.1)
 
@@ -6251,12 +6249,12 @@ region_enabled = true
 region_rect = Rect2(0, 0, 715.6869, 667.05115)
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1427211204]
-position = Vector2(1091.0001, 637.00006)
+position = Vector2(1097.0001, 637)
 rotation = 1.5865043
 scale = Vector2(0.59965086, 0.43453243)
 texture = ExtResource("5_iyd33")
 region_enabled = true
-region_rect = Rect2(483.19385, 239.66925, 180.06189, 111.46686)
+region_rect = Rect2(495.10248, 257.9846, 151.22046, 77.9487)
 
 [node name="Sprite2D5" type="Sprite2D" parent="." unique_id=2066130849]
 position = Vector2(407.00003, -44)
@@ -6273,7 +6271,7 @@ animation = &"cuboard"
 frame_progress = 0.4838982
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1259984976]
-position = Vector2(607.99994, -54)
+position = Vector2(618, -58.999996)
 scale = Vector2(1.324324, 0.9412166)
 texture = ExtResource("5_iyd33")
 region_enabled = true
@@ -6285,10 +6283,3 @@ scale = Vector2(0.8945946, 0.7835821)
 texture = ExtResource("8_mkw7v")
 region_enabled = true
 region_rect = Rect2(464.1977, 56.296616, 555.1294, 469.5124)
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1292580353]
-script = ExtResource("9_jahpa")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1899914515]
-position = Vector2(308, 545)
-shape = SubResource("RectangleShape2D_euojc")

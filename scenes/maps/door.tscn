@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cbkdptq3d5x77" path="res://scenes/maps/Screenshot 2026-07-31 170628.png" id="1_nggn5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihcpw"]
-size = Vector2(41, 14)
+size = Vector2(56, 27)
 
 [node name="compdoor" type="Area2D" unique_id=212619072]
 position = Vector2(430, 132)
@@ -27,5 +27,5 @@ polygon = PackedVector2Array(-20.093048, -13.879517, -20.093048, 2.313263, 29.02
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1956065301]
 visible = false
-position = Vector2(19.5, 3)
+position = Vector2(20, 2.5)
 shape = SubResource("RectangleShape2D_ihcpw")

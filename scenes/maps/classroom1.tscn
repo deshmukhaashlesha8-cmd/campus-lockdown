@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://c21kxhkuitup8" path="res://scenes/player/playerc.gd" id="4_2ryej"]
 [ext_resource type="PackedScene" uid="uid://bowys7vv8d26y" path="res://scenes/maps/exitdoor.tscn" id="5_vss41"]
 [ext_resource type="Texture2D" uid="uid://qpqmgbgl5hfc" path="res://scenes/maps/ChatGPT_Image_Aug_4__2026__05_56_56_PM-removebg-preview.png" id="6_1c6u0"]
+[ext_resource type="Script" uid="uid://cxt7162wh1tww" path="res://scenes/maps/exitclass1.gd" id="7_4dhv5"]
 [ext_resource type="Texture2D" uid="uid://d27uw0cuyfw8k" path="res://scenes/maps/ChatGPT_Image_Aug_4__2026__05_29_16_PM-removebg-preview.png" id="7_nha3p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
@@ -12263,6 +12264,7 @@ tile_set = SubResource("TileSet_euojc")
 [node name="Sprite2D" type="Sprite2D" parent="TileMapLayer" unique_id=120724922]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1779630470]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1469248210]
 polygon = PackedVector2Array(456, 891, 466, 1002, 27, 929, 50, -91, 1190, -98, 1182, 994, 750, 1012, 758, 896, 1119, 891, 1104, 11, 92, 15, 95, 896)
@@ -12293,8 +12295,10 @@ script = ExtResource("4_2ryej")
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1791804079]
 
 [node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("5_vss41")]
-position = Vector2(573.00006, 941)
-scale = Vector2(1.3, 1.3)
+z_index = 2
+position = Vector2(578, 941)
+scale = Vector2(1.2, 1.2)
+script = ExtResource("7_4dhv5")
 
 [node name="ChatGptImageAug42026055656PmRemovebgPreview" type="Sprite2D" parent="." unique_id=318773078]
 position = Vector2(569, -15)

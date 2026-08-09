@@ -10,7 +10,7 @@ func _process(delta):
 			ObjectiveManager.update_objective()
 			SceneTransition.fade_to_scene(next_scene)
 		else:
-			print("Lab is locked. Find the key first.")
+			PopupManager.show_message("Brooo 😭 even this door rejected you. Find the key first.", 2.5)
 
 func _on_body_entered(body):
 	if body.name == "player":

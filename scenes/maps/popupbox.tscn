@@ -2,21 +2,47 @@
 
 [ext_resource type="Script" uid="uid://bcwf8sgk1vfst" path="res://scenes/maps/popupbox.gd" id="1_5lcwx"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbetf"]
+bg_color = Color(0.12, 0.12, 0.12, 0.49411765)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9607843, 0.78039217, 0.41568628, 1)
+corner_detail = 20
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
 [node name="popupbox" type="CanvasLayer" unique_id=1055576107]
-script = ExtResource("1_5lcwx")
+layer = 0
 
 [node name="Control" type="Control" parent="." unique_id=2053607182]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -12.0
-offset_top = 441.0
-offset_right = 219.0
-offset_bottom = 651.0
+offset_left = 277.0
+offset_top = 282.0
+offset_right = 1004.0
+offset_bottom = 414.0
+script = ExtResource("1_5lcwx")
 
-[node name="Label" type="Label" parent="Control" unique_id=931904645]
+[node name="Panel" type="Panel" parent="Control" unique_id=2043396758]
 layout_mode = 0
-offset_left = 75.0
-offset_top = 97.0
-offset_right = 138.0
-offset_bottom = 130.0
-text = "heloooo"
+offset_left = 15.0
+offset_top = -6.0
+offset_right = 670.0
+offset_bottom = 60.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbetf")
+
+[node name="Label" type="Label" parent="Control/Panel" unique_id=931904645]
+layout_mode = 0
+offset_left = 17.0
+offset_top = -22.0
+offset_right = 630.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 23
+text = "Find the key first..Even this door has trust issue!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

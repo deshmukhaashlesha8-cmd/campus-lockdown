@@ -1,22 +1,38 @@
 # PopupManager.gd
-extends Node
+extends CanvasLayer
 
-const POPUP_SCENE := preload("res://scenes/maps/popupbox.tscn")
+var popup_label: Label
+var tween: Tween
 
-var _popup_instance: CanvasLayer = null
+func _ready() -> void:
+	
 
-func _ensure_popup() -> void:
-	if _popup_instance == null:
-		_popup_instance = POPUP_SCENE.instantiate()
-		get_tree().root.add_child(_popup_instance)
+	popup_label = Label.new()
+	popup_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
-func show_popup(text: String, on_closed: Callable = Callable()) -> void:
-	_ensure_popup()
-	if _popup_instance.visible:
-		push_warning("PopupManager: tried to show popup while one is active")
-		return
+	var font = load("res://font/OpenSans_SemiCondensed-Bold.ttf")
+	popup_label.add_theme_font_override("font", font)
+	popup_label.add_theme_font_size_override("font_size", 25)
 
-	if on_closed.is_valid():
-		_popup_instance.closed.connect(on_closed, CONNECT_ONE_SHOT)
+	popup_label.add_theme_color_override("font_color", Color("#FFF4D6"))
+	popup_label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.8))
+	popup_label.add_theme_constant_override("shadow_offset_x", 2)
+	popup_label.add_theme_constant_override("shadow_offset_y", 2)
 
-	_popup_instance.show_message(text)
+	popup_label.modulate.a = 0.0
+	popup_label.set_anchors_preset(Control.PRESET_CENTER_TOP)
+	popup_label.position = Vector2(-300, 40)
+	popup_label.size = Vector2(600, 60)
+
+	add_child(popup_label)
+
+func show_message(text: String, duration: float = 2.5) -> void:
+	popup_label.text = text
+
+	if tween:
+		tween.kill()
+
+	tween = create_tween()
+	tween.tween_property(popup_label, "modulate:a", 1.0, 0.2)
+	tween.tween_interval(duration)
+	tween.tween_property(popup_label, "modulate:a", 0.0, 0.3)

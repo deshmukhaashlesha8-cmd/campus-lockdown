@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://c21kxhkuitup8" path="res://scenes/player/playerc.gd" id="4_fxbyh"]
 [ext_resource type="PackedScene" uid="uid://bowys7vv8d26y" path="res://scenes/maps/exitdoor.tscn" id="5_s0vh6"]
 [ext_resource type="Texture2D" uid="uid://qpqmgbgl5hfc" path="res://scenes/maps/ChatGPT_Image_Aug_4__2026__05_56_56_PM-removebg-preview.png" id="6_q23ma"]
+[ext_resource type="Script" uid="uid://bnf65opi8yfyg" path="res://scenes/maps/exitclass2.gd" id="7_dfd20"]
 [ext_resource type="Texture2D" uid="uid://d27uw0cuyfw8k" path="res://scenes/maps/ChatGPT_Image_Aug_4__2026__05_29_16_PM-removebg-preview.png" id="7_sfjh3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
@@ -12295,8 +12296,10 @@ script = ExtResource("4_fxbyh")
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1791804079]
 
 [node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("5_s0vh6")]
+z_index = 2
 position = Vector2(569, 945.00006)
 scale = Vector2(1.2, 1.2)
+script = ExtResource("7_dfd20")
 metadata/_edit_lock_ = true
 
 [node name="ChatGptImageAug42026055656PmRemovebgPreview" type="Sprite2D" parent="." unique_id=318773078]

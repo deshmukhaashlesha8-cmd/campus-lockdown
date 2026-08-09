@@ -7,8 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://bowys7vv8d26y" path="res://scenes/maps/exitdoor.tscn" id="5_g1uoy"]
 [ext_resource type="Script" uid="uid://eawfw13ps2fb" path="res://scenes/player/player.gd" id="5_rcqsm"]
 [ext_resource type="Texture2D" uid="uid://mf3om0wengn7" path="res://scenes/maps/blackboard.cl.png" id="7_8ad4l"]
+[ext_resource type="Script" uid="uid://c5o4u806o2dyf" path="res://scenes/maps/exitcompL.gd" id="7_grgus"]
 [ext_resource type="Texture2D" uid="uid://cply24desre6v" path="res://scenes/maps/erasebg-transformed (5).png" id="7_ho4nn"]
 [ext_resource type="Texture2D" uid="uid://cgy2ssl55w72c" path="res://scenes/maps/erasebg-transformed (1).png" id="9_jy42y"]
+[ext_resource type="Script" uid="uid://dljgd1cokgnoo" path="res://scenes/maps/computer_1.gd" id="11_grgus"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcqsm"]
 texture = ExtResource("1_gm1tu")
@@ -9575,6 +9577,9 @@ texture = ExtResource("2_e2vyo")
 sources/0 = SubResource("TileSetAtlasSource_rcqsm")
 sources/1 = SubResource("TileSetAtlasSource_g1uoy")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euojc"]
+size = Vector2(125.55552, 126.66666)
+
 [node name="complab1" type="Node2D" unique_id=1009185928]
 position = Vector2(279, 829)
 rotation = -1.5707964
@@ -9595,7 +9600,7 @@ tile_map_data = PackedByteArray("AAAAAO//AAAHABQAAAAAAPD/AAAAAAEAAAAAAPH/AAAAAAI
 tile_set = SubResource("TileSet_88xuk")
 
 [node name="player" parent="." unique_id=501279140 instance=ExtResource("1_803r6")]
-z_index = 1
+z_index = 2
 position = Vector2(253.33331, 78.000015)
 rotation = 1.5707964
 scale = Vector2(3.3, 3.3)
@@ -9606,9 +9611,11 @@ script = ExtResource("5_rcqsm")
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=131127912]
 
 [node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("5_g1uoy")]
-position = Vector2(138.88885, 113.33335)
+visible = false
+z_index = 2
+position = Vector2(144.4444, 118.88889)
 rotation = 1.5865043
-scale = Vector2(1.2, 1.2)
+script = ExtResource("7_grgus")
 
 [node name="collide" type="StaticBody2D" parent="." unique_id=46446199]
 visible = false
@@ -9666,7 +9673,7 @@ region_rect = Rect2(424.0803, 110.16009, 380.96964, 138.16013)
 region_filter_clip_enabled = true
 
 [node name="ErasebgTransformed(5)3" type="Sprite2D" parent="." unique_id=1092135775]
-position = Vector2(659.1638, 106.307724)
+position = Vector2(659.1638, 120.03949)
 rotation = 1.5865043
 scale = Vector2(1.0732535, 1.215799)
 texture = ExtResource("7_ho4nn")
@@ -9682,7 +9689,7 @@ region_enabled = true
 region_rect = Rect2(355.05243, 145.47751, 386.6573, 175.7533)
 
 [node name="ErasebgTransformed(5)2" type="Sprite2D" parent="." unique_id=760902115]
-position = Vector2(443.5921, 107.28779)
+position = Vector2(443.5921, 120.125916)
 rotation = 1.5865043
 scale = Vector2(1.0665835, 1.1077247)
 texture = ExtResource("7_ho4nn")
@@ -9720,3 +9727,14 @@ scale = Vector2(0.32608822, 0.3306726)
 texture = ExtResource("9_jy42y")
 region_enabled = true
 region_rect = Rect2(704.0482, 0, 447.95178, 640.09753)
+
+[node name="computer1" type="Area2D" parent="." unique_id=361611545]
+position = Vector2(465.55557, -4.444424)
+script = ExtResource("11_grgus")
+
+[node name="Sprite2D" type="Sprite2D" parent="computer1" unique_id=1046396385]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="computer1" unique_id=2011060577]
+visible = false
+position = Vector2(-23.888885, 5.555542)
+shape = SubResource("RectangleShape2D_euojc")
