@@ -112,7 +112,6 @@ sprite_frames = SubResource("SpriteFrames_euojc")
 animation = &"walk_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250590293]
-visible = false
 position = Vector2(3, 3)
 shape = SubResource("CircleShape2D_euojc")
 
