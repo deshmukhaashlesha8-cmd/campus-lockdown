@@ -13,7 +13,9 @@
 [ext_resource type="Script" uid="uid://bxbtx872ybhfc" path="res://scripts/classScript/officeD (2).gd" id="7_g3n7f"]
 [ext_resource type="Script" uid="uid://s65hy1jld3hp" path="res://scripts/classScript/library.gd" id="8_k6vc2"]
 [ext_resource type="Script" uid="uid://cwla6lp3og35x" path="res://scenes/maps/msg_zone.gd" id="14_upabi"]
+[ext_resource type="Script" uid="uid://cvj253ql7rxgd" path="res://scenes/maps/level_up.gd" id="15_gikht"]
 [ext_resource type="PackedScene" uid="uid://d1cebbn4o1jt5" path="res://scenes/maps/popupbox.tscn" id="16_kjf42"]
+[ext_resource type="Texture2D" uid="uid://d2kawfknpl6a7" path="res://scenes/maps/erasebg-transformed (9).png" id="16_rjxyo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0n26"]
 texture = ExtResource("5_qhs7t")
@@ -9585,6 +9587,9 @@ size = Vector2(41, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ww8"]
 size = Vector2(52, 33)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n848u"]
+size = Vector2(65, 39)
+
 [node name="ground" type="Node2D" unique_id=981643251]
 position = Vector2(0, -7)
 
@@ -9685,6 +9690,7 @@ script = ExtResource("4_od4o5")
 [node name="collide" type="Node" parent="gameTilemap" unique_id=92529541]
 
 [node name="grd" type="StaticBody2D" parent="gameTilemap/collide" unique_id=2028006250]
+visible = false
 position = Vector2(0, 25)
 scale = Vector2(0.8, 0.8)
 
@@ -9709,7 +9715,11 @@ polygon = PackedVector2Array(-28, 625, 513, 625, 512, 601, -31, 594)
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="gameTilemap/collide/grd" unique_id=694009362]
 polygon = PackedVector2Array(801.24994, 719.99994, 799.99994, 748.74994, 1559.9999, 754.99994, 1559.9999, 721.24994)
 
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="gameTilemap/collide/grd" unique_id=526794422]
+polygon = PackedVector2Array(-32.499996, -36.249996, -32.499996, 829.99994, 1553.7499, 829.99994, 1552.4999, -43.749996, -17.499998, -44.999996, -14.999998, -64.99999, 1568.7499, -56.249992, 1569.9999, 846.24994, -43.749996, 842.49994, -44.999996, -48.749992)
+
 [node name="entrance" type="StaticBody2D" parent="gameTilemap/collide" unique_id=1074791323]
+visible = false
 position = Vector2(0, 25)
 physics_material_override = SubResource("PhysicsMaterial_euojc")
 
@@ -9723,6 +9733,7 @@ position = Vector2(64, -38)
 polygon = PackedVector2Array(623, 446, 623, 479, 545, 482, 547, 503, 617, 502, 620, 583, 576, 583, 578, 627, 644, 627, 643, 451)
 
 [node name="class" type="StaticBody2D" parent="gameTilemap/collide" unique_id=954942142]
+visible = false
 position = Vector2(2, 31)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gameTilemap/collide/class" unique_id=1605026032]
@@ -9731,6 +9742,7 @@ scale = Vector2(0.7726748, 0.7733029)
 polygon = PackedVector2Array(121, 199, 119, 238, 357, 550, 525.4475, 439.67245, 410.26318, 278.02817, 455, 390, 490, 438, 361, 509, 270, 384, 398, 310, 416, 344, 423.20526, 297.4255, 333.9051, 178.45529, 305.43256, 190.09369, 382, 278, 246, 352, 149, 223, 281, 157, 303, 188, 330.02246, 177.16214, 282, 115)
 
 [node name="lab" type="StaticBody2D" parent="gameTilemap/collide" unique_id=578918874]
+visible = false
 position = Vector2(0, 25)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gameTilemap/collide/lab" unique_id=370601538]
@@ -9743,6 +9755,7 @@ position = Vector2(101, -48)
 polygon = PackedVector2Array(759, 217, 792, 179, 789, 148, 727, 119, 724, 137, 776, 159, 740, 207)
 
 [node name="adminO" type="StaticBody2D" parent="gameTilemap/collide" unique_id=47283783]
+visible = false
 position = Vector2(0, 29)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gameTilemap/collide/adminO" unique_id=107872351]
@@ -9751,6 +9764,7 @@ scale = Vector2(0.7838982, 0.78859293)
 polygon = PackedVector2Array(769, 105, 766, -3, 533, -5, 536, 171, 608, 172, 604, 154, 555, 156, 553.2846, 90.814606, 552, 42, 741, 49, 743, 114, 718, 151, 656, 153, 654, 178, 730, 178)
 
 [node name="admin2" type="StaticBody2D" parent="gameTilemap/collide" unique_id=462140853]
+visible = false
 position = Vector2(0, 27)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gameTilemap/collide/admin2" unique_id=1631727538]
@@ -9768,6 +9782,7 @@ scale = Vector2(0.7254746, 0.81249946)
 polygon = PackedVector2Array(703, 133, 545, 132, 549, 152, 586.33777, 152.2489, 699, 153)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="gameTilemap/collide" unique_id=524493010]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gameTilemap/collide/StaticBody2D" unique_id=261174295]
 position = Vector2(103.218285, 5.661575)
@@ -9788,6 +9803,18 @@ shape = SubResource("RectangleShape2D_c8ww8")
 visible = false
 
 [node name="msg" type="Node" parent="gameTilemap" unique_id=390416349]
+
+[node name="LevelUP" type="Area2D" parent="gameTilemap" unique_id=793071645]
+script = ExtResource("15_gikht")
+
+[node name="Sprite2D" type="Sprite2D" parent="gameTilemap/LevelUP" unique_id=1161020022]
+position = Vector2(546.0625, 515.3125)
+scale = Vector2(0.02094184, 0.019042933)
+texture = ExtResource("16_rjxyo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gameTilemap/LevelUP" unique_id=1051590759]
+position = Vector2(556.5, 512.5)
+shape = SubResource("RectangleShape2D_n848u")
 
 [connection signal="body_entered" from="gameTilemap/door" to="gameTilemap/door" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/door" to="gameTilemap/door" method="_on_body_exited"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cutmpbo0jvp0m"]
+
+[node name="Control" type="Control" unique_id=634436745]
+layout_mode = 3
+anchor_right = 0.033
+anchor_bottom = 0.061000004
+offset_right = -0.22700119
+offset_bottom = -0.07700348
+
+[node name="Label" type="Label" parent="." unique_id=1063638990]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 274.0
+offset_right = 452.0
+offset_bottom = 297.0
+text = "campus Secured
+cause of outbreak:Canteen Samosa Chutney"
+horizontal_alignment = 1
+vertical_alignment = 1

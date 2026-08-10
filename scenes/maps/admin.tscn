@@ -6231,7 +6231,7 @@ polygon = PackedVector2Array(997, -65, 1009, 91, 1075, 97, 1076, -60)
 
 [node name="admindoor" parent="." unique_id=212619072 instance=ExtResource("4_abihx")]
 z_index = 2
-position = Vector2(588.99994, 756)
+position = Vector2(589, 756)
 scale = Vector2(1.1, 1.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1084493874]
