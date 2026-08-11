@@ -12288,11 +12288,12 @@ polygon = PackedVector2Array(516, 516, 516, 596, 664, 597, 670, 515)
 polygon = PackedVector2Array(804, 519, 806, 602, 960, 604, 959, 520)
 
 [node name="player" parent="." unique_id=501279140 instance=ExtResource("3_4dhv5")]
-position = Vector2(581, 747)
+position = Vector2(596, 875)
 scale = Vector2(3.5, 3.5)
 script = ExtResource("4_2ryej")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1791804079]
+position = Vector2(2.2857208, -0.28571606)
 
 [node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("5_vss41")]
 z_index = 2

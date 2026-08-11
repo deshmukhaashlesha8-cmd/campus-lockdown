@@ -12290,7 +12290,7 @@ polygon = PackedVector2Array(516, 516, 516, 596, 664, 597, 670, 515)
 polygon = PackedVector2Array(804, 519, 806, 602, 960, 604, 959, 520)
 
 [node name="player" parent="." unique_id=501279140 instance=ExtResource("3_dfd20")]
-position = Vector2(581, 747)
+position = Vector2(585, 886)
 scale = Vector2(3.5, 3.5)
 script = ExtResource("4_fxbyh")
 

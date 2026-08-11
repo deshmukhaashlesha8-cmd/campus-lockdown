@@ -6200,7 +6200,7 @@ collision_visibility_mode = 1
 [node name="player" parent="." unique_id=501279140 groups=["player"] instance=ExtResource("2_cx6uu")]
 z_index = 2
 position = Vector2(605, 682)
-scale = Vector2(3.41, 3.41)
+scale = Vector2(3.2, 3.2)
 script = ExtResource("3_cx6uu")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1725831891]

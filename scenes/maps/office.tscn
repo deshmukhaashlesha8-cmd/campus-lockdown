@@ -10581,8 +10581,8 @@ script = ExtResource("5_tpn6a")
 
 [node name="player" parent="." unique_id=501279140 instance=ExtResource("2_sup3a")]
 z_index = 2
-position = Vector2(598.99994, 591.99994)
-scale = Vector2(3.4, 3.4)
+position = Vector2(619.99994, 663.99994)
+scale = Vector2(3.2, 3.2)
 script = ExtResource("3_sup3a")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=260027753]
