@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm8tstslb6m0o"
-path="res://.godot/imported/erasebg-transformed (8).png-099295fb8e98709b16aa22571f94eff7.ctex"
+uid="uid://crmjtsa684qi"
+path="res://.godot/imported/erasebg-transformed (11).png-72636183265556effc05273955241b49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/maps/erasebg-transformed (8).png"
-dest_files=["res://.godot/imported/erasebg-transformed (8).png-099295fb8e98709b16aa22571f94eff7.ctex"]
+source_file="res://scenes/maps/erasebg-transformed (11).png"
+dest_files=["res://.godot/imported/erasebg-transformed (11).png-72636183265556effc05273955241b49.ctex"]
 
 [params]
 

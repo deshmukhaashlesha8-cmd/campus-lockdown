@@ -11,3 +11,11 @@ func _ready():
 
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_texture_button_pressed() -> void:
+	print("Settings opened")
+
+
+func _on_button_2_pressed() -> void:
+	print("Map opened")

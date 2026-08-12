@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bt6mulo6qmqa2"]
 
 [ext_resource type="Script" uid="uid://be7giq135mp3r" path="res://scenes/maps/control.gd" id="1_4rqo4"]
+[ext_resource type="Texture2D" uid="uid://bxlqv0ike3fj5" path="res://scenes/maps/ChatGPT Image Aug 9, 2026, 10_58_42 PM.png" id="2_djnby"]
 [ext_resource type="Texture2D" uid="uid://bgv5te7te4atm" path="res://scenes/maps/WhatsApp Image 2026-08-05 at 11.29.26 AM.jpeg" id="2_pmeri"]
 [ext_resource type="Texture2D" uid="uid://cv372iioubu6g" path="res://scenes/maps/ChatGPT_Image_Aug_6__2026__07_09_58_PM-removebg-preview.png" id="3_w3sa4"]
 
@@ -19,25 +20,31 @@ script = ExtResource("1_4rqo4")
 
 [node name="Start" type="Button" parent="CanvasLayer" unique_id=447749941]
 offset_left = 481.0
-offset_top = 316.0
+offset_top = 326.0
 offset_right = 697.0
-offset_bottom = 374.0
+offset_bottom = 384.0
 text = "Start"
 
 [node name="Quit" type="Button" parent="CanvasLayer" unique_id=488118158]
 offset_left = 485.0
-offset_top = 401.0
+offset_top = 410.0
 offset_right = 700.0
-offset_bottom = 458.0
+offset_bottom = 467.0
 text = "Quit"
 
+[node name="ChatGptImageAug9,2026,105842Pm" type="Sprite2D" parent="." unique_id=1831455855]
+position = Vector2(605.5, 330)
+scale = Vector2(0.8584253, 0.6353591)
+texture = ExtResource("2_djnby")
+
 [node name="WhatsAppImage20260805At11_29_26Am" type="Sprite2D" parent="." unique_id=2140073824]
+visible = false
 position = Vector2(608, 336.99997)
 scale = Vector2(0.8397791, 0.60589314)
 texture = ExtResource("2_pmeri")
 
 [node name="ChatGptImageAug62026070958PmRemovebgPreview" type="Sprite2D" parent="." unique_id=1500569394]
-position = Vector2(597, 199)
+position = Vector2(604, 200)
 scale = Vector2(0.78285354, 0.7051282)
 texture = ExtResource("3_w3sa4")
 
