@@ -12298,7 +12298,7 @@ script = ExtResource("4_fxbyh")
 
 [node name="exitdoor" parent="." unique_id=212619072 instance=ExtResource("5_s0vh6")]
 z_index = 2
-position = Vector2(569, 945.00006)
+position = Vector2(569, 958)
 scale = Vector2(1.2, 1.2)
 script = ExtResource("7_dfd20")
 metadata/_edit_lock_ = true
