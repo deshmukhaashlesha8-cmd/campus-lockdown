@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://cutmpbo0jvp0m"]
 
+[sub_resource type="Theme" id="Theme_dtncd"]
+
+[sub_resource type="Theme" id="Theme_7optt"]
+
 [node name="Control" type="Control" unique_id=634436745]
 layout_mode = 3
 anchor_right = 0.033
@@ -7,13 +11,52 @@ anchor_bottom = 0.061000004
 offset_right = -0.22700119
 offset_bottom = -0.07700348
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1476332521]
+emitting = false
+amount = 10
+one_shot = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1799643042]
+layout_mode = 0
+offset_right = 1218.0
+offset_bottom = 661.0
+theme = SubResource("Theme_dtncd")
+color = Color(1, 1, 1, 0.1882353)
+
+[node name="Label2" type="Label" parent="." unique_id=1872301990]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label3" type="Label" parent="." unique_id=35417546]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="Label" type="Label" parent="." unique_id=1063638990]
+modulate = Color(0, 0.047058824, 0.15294118, 1)
 layout_mode = 0
 offset_left = 412.0
 offset_top = 274.0
-offset_right = 452.0
-offset_bottom = 297.0
+offset_right = 754.0
+offset_bottom = 323.0
+theme = SubResource("Theme_7optt")
 text = "campus Secured
 cause of outbreak:Canteen Samosa Chutney"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=202425390]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Button" type="Button" parent="." unique_id=243654449]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button2" type="Button" parent="." unique_id=275113503]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

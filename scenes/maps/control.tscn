@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://buarpcgvmv2ec"]
 
 [ext_resource type="Script" uid="uid://be7giq135mp3r" path="res://scenes/maps/control.gd" id="1_n6lf2"]
-[ext_resource type="Script" uid="uid://chwjbeguaayuk" path="res://button.gd" id="1_sv8hj"]
+[ext_resource type="Script" uid="uid://chwjbeguaayuk" path="res://New folder/button.gd" id="1_sv8hj"]
 
 [node name="main menu" type="Control" unique_id=315284014]
 visible = false

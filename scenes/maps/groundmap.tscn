@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://d1cebbn4o1jt5" path="res://scenes/maps/popupbox.tscn" id="16_kjf42"]
 [ext_resource type="Texture2D" uid="uid://d2kawfknpl6a7" path="res://scenes/maps/erasebg-transformed (9).png" id="16_rjxyo"]
 [ext_resource type="Texture2D" uid="uid://17moqk6qsbm" path="res://scenes/maps/WhatsApp_Image_2026-08-10_at_12.48.07_PM-removebg-preview.png" id="17_rjxyo"]
+[ext_resource type="Script" uid="uid://cfgrpmtbolx1o" path="res://scenes/maps/ending_ui.gd" id="18_eksqb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0n26"]
 texture = ExtResource("5_qhs7t")
@@ -9591,6 +9592,201 @@ size = Vector2(52, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n848u"]
 size = Vector2(65, 39)
 
+[sub_resource type="Theme" id="Theme_eksqb"]
+
+[sub_resource type="FontFile" id="FontFile_dtncd"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/33/0/ascent = 0.0
+cache/0/33/0/descent = 0.0
+cache/0/33/0/underline_position = 0.0
+cache/0/33/0/underline_thickness = 0.0
+cache/0/33/0/scale = 1.0
+cache/0/34/0/ascent = 0.0
+cache/0/34/0/descent = 0.0
+cache/0/34/0/underline_position = 0.0
+cache/0/34/0/underline_thickness = 0.0
+cache/0/34/0/scale = 1.0
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+cache/0/37/0/ascent = 0.0
+cache/0/37/0/descent = 0.0
+cache/0/37/0/underline_position = 0.0
+cache/0/37/0/underline_thickness = 0.0
+cache/0/37/0/scale = 1.0
+cache/0/38/0/ascent = 0.0
+cache/0/38/0/descent = 0.0
+cache/0/38/0/underline_position = 0.0
+cache/0/38/0/underline_thickness = 0.0
+cache/0/38/0/scale = 1.0
+cache/0/39/0/ascent = 0.0
+cache/0/39/0/descent = 0.0
+cache/0/39/0/underline_position = 0.0
+cache/0/39/0/underline_thickness = 0.0
+cache/0/39/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/41/0/ascent = 0.0
+cache/0/41/0/descent = 0.0
+cache/0/41/0/underline_position = 0.0
+cache/0/41/0/underline_thickness = 0.0
+cache/0/41/0/scale = 1.0
+cache/0/42/0/ascent = 0.0
+cache/0/42/0/descent = 0.0
+cache/0/42/0/underline_position = 0.0
+cache/0/42/0/underline_thickness = 0.0
+cache/0/42/0/scale = 1.0
+cache/0/43/0/ascent = 0.0
+cache/0/43/0/descent = 0.0
+cache/0/43/0/underline_position = 0.0
+cache/0/43/0/underline_thickness = 0.0
+cache/0/43/0/scale = 1.0
+cache/0/44/0/ascent = 0.0
+cache/0/44/0/descent = 0.0
+cache/0/44/0/underline_position = 0.0
+cache/0/44/0/underline_thickness = 0.0
+cache/0/44/0/scale = 1.0
+
+[sub_resource type="FontVariation" id="FontVariation_u66k8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ucf3"]
+font = SubResource("FontVariation_u66k8")
+font_size = 33
+font_color = Color(1, 0.82, 0.82, 1)
+shadow_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_tf2b5"]
+line_spacing = 2.0
+font_size = 11
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7optt"]
+particle_flag_disable_z = true
+initial_velocity_min = 248.93
+initial_velocity_max = 248.93
+gravity = Vector3(500, 98, 0)
+scale_min = 5.29
+scale_max = 5.29
+hue_variation_min = -1.0
+hue_variation_max = 0.99999994
+
 [node name="ground" type="Node2D" unique_id=981643251]
 position = Vector2(0, -7)
 
@@ -9610,7 +9806,7 @@ tile_set = SubResource("TileSet_c8ww8")
 
 [node name="door" parent="gameTilemap" unique_id=1109102295 instance=ExtResource("3_uldgt")]
 visible = false
-position = Vector2(703, 348)
+position = Vector2(701, 343.99997)
 rotation = 2.162463
 scale = Vector2(0.9, 0.9)
 collision_mask = 3
@@ -9723,6 +9919,7 @@ polygon = PackedVector2Array(801.24994, 719.99994, 799.99994, 748.74994, 1559.99
 polygon = PackedVector2Array(-32.499996, -36.249996, -32.499996, 829.99994, 1553.7499, 829.99994, 1552.4999, -43.749996, -17.499998, -44.999996, -14.999998, -64.99999, 1568.7499, -56.249992, 1569.9999, 846.24994, -43.749996, 842.49994, -44.999996, -48.749992)
 
 [node name="entrance" type="StaticBody2D" parent="gameTilemap/collide" unique_id=1074791323]
+visible = false
 position = Vector2(0, 25)
 physics_material_override = SubResource("PhysicsMaterial_euojc")
 
@@ -9808,16 +10005,17 @@ visible = false
 [node name="msg" type="Node" parent="gameTilemap" unique_id=390416349]
 
 [node name="LevelUP" type="Area2D" parent="gameTilemap" unique_id=793071645]
+position = Vector2(546, 517)
 script = ExtResource("15_gikht")
 
 [node name="Sprite2D" type="Sprite2D" parent="gameTilemap/LevelUP" unique_id=1161020022]
-position = Vector2(546.0625, 515.3125)
+position = Vector2(1, -3)
 scale = Vector2(0.02094184, 0.019042933)
 texture = ExtResource("16_rjxyo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gameTilemap/LevelUP" unique_id=1051590759]
 visible = false
-position = Vector2(556.5, 512.5)
+position = Vector2(9, 3)
 shape = SubResource("RectangleShape2D_n848u")
 
 [node name="gate" type="Sprite2D" parent="gameTilemap" unique_id=881587894]
@@ -9835,6 +10033,113 @@ visible = false
 scale = Vector2(0.99999994, 1)
 polygon = PackedVector2Array(-246.12769, 4.1833496, -254.19751, 76.27075, 234.0232, 79.70337, 229.98828, 7.615967)
 
+[node name="ending ui" type="CanvasLayer" parent="." unique_id=2058981438]
+visible = false
+script = ExtResource("18_eksqb")
+
+[node name="background" type="ColorRect" parent="ending ui" unique_id=1020082025]
+modulate = Color(0.15, 0.08330001, 0.06300001, 0.5137255)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 230.0
+offset_top = 145.0
+offset_right = -529.0
+offset_bottom = -247.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+theme = SubResource("Theme_eksqb")
+
+[node name="popup" type="Panel" parent="ending ui" unique_id=859096835]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.5
+offset_top = -114.5
+offset_right = 167.5
+offset_bottom = 126.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ending ui/popup" unique_id=1263130191]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 29.0
+offset_right = 429.0
+offset_bottom = 240.0
+theme_override_constants/separation = 16
+
+[node name="title" type="Label" parent="ending ui/popup/VBoxContainer" unique_id=1675290711]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontFile_dtncd")
+theme_override_font_sizes/font_size = 24
+text = "Campus secured"
+label_settings = SubResource("LabelSettings_3ucf3")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="ending ui/popup/VBoxContainer" unique_id=2051207182]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Lockdown Protocol Successfully Activated"
+label_settings = SubResource("LabelSettings_tf2b5")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="ending ui/popup/VBoxContainer" unique_id=2038077090]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.86, 0.86, 1)
+theme_override_font_sizes/font_size = 13
+text = "Cause of outbreak: Canteen Samosa Chutney!!!!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ending ui/popup/VBoxContainer" unique_id=297383453]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="ending ui" unique_id=839987990]
+modulate = Color(1, 0.6, 0.6, 1)
+offset_left = 415.0
+offset_top = 383.0
+offset_right = 499.0
+offset_bottom = 415.0
+theme_override_colors/icon_normal_color = Color(1, 0.66999996, 0.66999996, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.72, 0.72, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.69, 0.69, 1)
+theme_override_font_sizes/font_size = 12
+text = "Next level"
+
+[node name="Button2" type="Button" parent="ending ui" unique_id=1577399545]
+modulate = Color(1, 0.5, 0.5, 1)
+offset_left = 643.0
+offset_top = 383.0
+offset_right = 721.0
+offset_bottom = 411.0
+offset_transform_enabled = true
+theme_override_font_sizes/font_size = 12
+text = "Quit"
+
+[node name="Button" type="Button" parent="ending ui" unique_id=1213197760]
+modulate = Color(1, 0.6, 0.6, 1)
+offset_left = 526.0
+offset_top = 383.0
+offset_right = 611.0
+offset_bottom = 414.0
+theme_override_colors/icon_normal_color = Color(1, 0.66999996, 0.66999996, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.72, 0.72, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.69, 0.69, 1)
+theme_override_font_sizes/font_size = 11
+text = "Play again"
+
+[node name="confetti" type="GPUParticles2D" parent="ending ui" unique_id=1509485110]
+position = Vector2(580, 324)
+emitting = false
+amount = 150
+lifetime = 2.5
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_7optt")
+
 [connection signal="body_entered" from="gameTilemap/door" to="gameTilemap/door" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/door" to="gameTilemap/door" method="_on_body_exited"]
 [connection signal="body_entered" from="gameTilemap/class1" to="gameTilemap/class1" method="_on_body_entered"]
@@ -9849,3 +10154,5 @@ polygon = PackedVector2Array(-246.12769, 4.1833496, -254.19751, 76.27075, 234.02
 [connection signal="body_exited" from="gameTilemap/adminD" to="gameTilemap/adminD" method="_on_body_exited"]
 [connection signal="body_entered" from="gameTilemap/msgZone" to="gameTilemap/msgZone" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/msgZone" to="gameTilemap/door" method="_on_msg_zone_body_exited"]
+[connection signal="pressed" from="ending ui/Button2" to="ending ui" method="_on_button_2_pressed"]
+[connection signal="pressed" from="ending ui/Button" to="ending ui" method="_on_button_pressed"]
