@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b2hqehwvewrh8" path="res://scenes/maps/7d307ec8-34c7-46a7-825d-e611da5c1908.png" id="7_m44v8"]
 [ext_resource type="Script" uid="uid://tq0vi2stdxyb" path="res://scenes/maps/key.gd" id="10_jro5x"]
 [ext_resource type="Texture2D" uid="uid://dpcejfhesk1p1" path="res://scenes/maps/WhatsApp_Image_2026-08-03_at_11.52.26_AM-removebg-preview.png" id="12_tpn6a"]
+[ext_resource type="PackedScene" uid="uid://nuhxo8f1u6d8" path="res://scenes/maps/gui.tscn" id="13_dftng"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22fle"]
 texture = ExtResource("1_g0uey")
@@ -10578,7 +10579,7 @@ position = Vector2(601, 720)
 scale = Vector2(1.1, 1.1)
 script = ExtResource("5_tpn6a")
 
-[node name="player" parent="." unique_id=501279140 instance=ExtResource("2_sup3a")]
+[node name="player" parent="." unique_id=501279140 groups=["player"] instance=ExtResource("2_sup3a")]
 z_index = 2
 position = Vector2(619.99994, 663.99994)
 scale = Vector2(2.7, 2.7)
@@ -10653,5 +10654,7 @@ scale = Vector2(0.3949974, 0.34283522)
 texture = ExtResource("12_tpn6a")
 region_enabled = true
 region_rect = Rect2(108.13345, 223.49782, 138.74872, 141.86662)
+
+[node name="gui" parent="." unique_id=1721906309 instance=ExtResource("13_dftng")]
 
 [connection signal="body_entered" from="AdminKey2" to="AdminKey2" method="_on_body_entered"]

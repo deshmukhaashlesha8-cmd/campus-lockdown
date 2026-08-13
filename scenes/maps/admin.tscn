@@ -9,6 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://da1q0ds8pdoxi" path="res://assets/erasebg-transformed (1).png" id="6_mkw7v"]
 [ext_resource type="Texture2D" uid="uid://bjjaa42ywg3rw" path="res://scenes/maps/erasebg-transformed.png" id="7_jahpa"]
 [ext_resource type="Texture2D" uid="uid://b2hqehwvewrh8" path="res://scenes/maps/7d307ec8-34c7-46a7-825d-e611da5c1908.png" id="8_mkw7v"]
+[ext_resource type="Script" uid="uid://bd3xgk43so5jd" path="res://scenes/maps/gui.gd" id="10_t8e87"]
+[ext_resource type="Texture2D" uid="uid://f37rcj7878gk" path="res://scenes/maps/task map.png" id="11_p3rg2"]
+[ext_resource type="Texture2D" uid="uid://cp12ljl2hko2g" path="res://scenes/maps/control.png" id="12_d75ud"]
+[ext_resource type="Texture2D" uid="uid://c83wqsdg711hk" path="res://scenes/maps/erasebg-transformed (10).png" id="13_cj24u"]
+[ext_resource type="Texture2D" uid="uid://bf1k3nrppwhm" path="res://scenes/maps/setting.png" id="14_o1ncp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8lf80"]
 texture = ExtResource("1_abihx")
@@ -6282,3 +6287,116 @@ scale = Vector2(0.8945946, 0.7835821)
 texture = ExtResource("8_mkw7v")
 region_enabled = true
 region_rect = Rect2(464.1977, 56.296616, 555.1294, 469.5124)
+
+[node name="gui" type="CanvasLayer" parent="." unique_id=1070292465]
+script = ExtResource("10_t8e87")
+
+[node name="Button2" type="Button" parent="gui" unique_id=1504695807]
+modulate = Color(1, 1, 1, 0.6784314)
+z_index = 1
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 153.0
+offset_bottom = 151.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("11_p3rg2")
+
+[node name="task_panel" type="Label" parent="gui" unique_id=256693243]
+visible = false
+offset_left = 89.0
+offset_top = 25.0
+offset_right = 293.16666
+offset_bottom = 228.33334
+scale = Vector2(1.2, 1.2)
+text = "TASKS"
+
+[node name="Label" type="Label" parent="gui/task_panel" unique_id=2050578572]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 31.666674
+offset_right = 190.0
+offset_bottom = 158.66669
+scale = Vector2(0.9, 0.9)
+text = "☐ Get Access Card
+☐ Secure Computer Lab
+☐ Check Library
+☐ Activate 3 Switches
+☐ Activate Lockdown"
+
+[node name="TextureButton2" type="Control" parent="gui" unique_id=1985420978]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 52.0
+offset_top = 454.0
+offset_right = 298.0
+offset_bottom = 708.0
+scale = Vector2(0.6, 0.6)
+
+[node name="TextureRect" type="TextureRect" parent="gui/TextureButton2" unique_id=446087650]
+layout_mode = 0
+offset_left = -21.666666
+offset_top = 36.666664
+offset_right = 224.33333
+offset_bottom = 290.66666
+texture = ExtResource("12_d75ud")
+
+[node name="up" type="Button" parent="gui/TextureButton2" unique_id=1037929860]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 56.66667
+offset_top = 56.666664
+offset_right = 145.0
+offset_bottom = 126.666664
+
+[node name="down" type="Button" parent="gui/TextureButton2" unique_id=516243677]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 59.999985
+offset_top = 196.66669
+offset_right = 144.99998
+offset_bottom = 280.0
+
+[node name="right" type="Button" parent="gui/TextureButton2" unique_id=1897346352]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 135.0
+offset_top = 131.66669
+offset_right = 220.0
+offset_bottom = 208.33337
+
+[node name="left" type="Button" parent="gui/TextureButton2" unique_id=1807075055]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -6.666664
+offset_top = 123.333374
+offset_right = 64.99999
+offset_bottom = 211.66669
+
+[node name="Control" type="CanvasLayer" parent="gui" unique_id=1339595859]
+
+[node name="ErasebgTransformed(10)" type="Sprite2D" parent="gui/Control" unique_id=148593306]
+position = Vector2(1167.0001, 51)
+scale = Vector2(0.50473183, 0.49170607)
+texture = ExtResource("13_cj24u")
+region_enabled = true
+region_rect = Rect2(0, 0, 191.52008, 196.00813)
+
+[node name="TextureButton" type="TextureButton" parent="gui/Control" unique_id=1703198754]
+modulate = Color(1, 1, 1, 0.8039216)
+offset_left = 1054.0
+offset_top = 25.0
+offset_right = 1177.0
+offset_bottom = 160.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("14_o1ncp")
+texture_hover = ExtResource("14_o1ncp")
+
+[connection signal="pressed" from="gui/Button2" to="gui" method="_on_button_2_pressed"]
+[connection signal="button_down" from="gui/TextureButton2/up" to="gui" method="_on_up_button_down"]
+[connection signal="button_up" from="gui/TextureButton2/up" to="gui" method="_on_up_button_up"]
+[connection signal="button_down" from="gui/TextureButton2/down" to="gui" method="_on_down_button_down"]
+[connection signal="button_up" from="gui/TextureButton2/down" to="gui" method="_on_down_button_up"]
+[connection signal="button_down" from="gui/TextureButton2/right" to="gui" method="_on_right_button_down"]
+[connection signal="button_up" from="gui/TextureButton2/right" to="gui" method="_on_right_button_up"]
+[connection signal="button_down" from="gui/TextureButton2/left" to="gui" method="_on_left_button_down"]
+[connection signal="button_up" from="gui/TextureButton2/left" to="gui" method="_on_left_button_up"]

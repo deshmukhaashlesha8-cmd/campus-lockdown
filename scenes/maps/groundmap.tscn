@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bf1k3nrppwhm" path="res://scenes/maps/setting.png" id="18_iwseu"]
 [ext_resource type="Texture2D" uid="uid://f37rcj7878gk" path="res://scenes/maps/task map.png" id="19_n70w5"]
 [ext_resource type="Texture2D" uid="uid://cp12ljl2hko2g" path="res://scenes/maps/control.png" id="20_goo6f"]
+[ext_resource type="Script" uid="uid://bd3xgk43so5jd" path="res://scenes/maps/gui.gd" id="21_n70w5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0n26"]
 texture = ExtResource("5_qhs7t")
@@ -9595,6 +9596,17 @@ size = Vector2(52, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n848u"]
 size = Vector2(65, 39)
 
+[sub_resource type="FontVariation" id="FontVariation_n70w5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_goo6f"]
+border_color = Color(0.59, 0.38349998, 0.38349998, 0.53333336)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 61
+corner_radius_bottom_left = 60
+
+[sub_resource type="Theme" id="Theme_euojc"]
+
 [node name="ground" type="Node2D" unique_id=981643251]
 position = Vector2(0, -7)
 
@@ -9687,7 +9699,7 @@ shape = SubResource("RectangleShape2D_euojc")
 [node name="ExitAdmin" type="Marker2D" parent="gameTilemap" unique_id=541174876]
 position = Vector2(730, 155)
 
-[node name="player" parent="gameTilemap" unique_id=501279140 instance=ExtResource("1_omtfk")]
+[node name="player" parent="gameTilemap" unique_id=501279140 groups=["player"] instance=ExtResource("1_omtfk")]
 z_index = 1
 position = Vector2(582, 354)
 scale = Vector2(0.9, 0.9)
@@ -9695,44 +9707,6 @@ script = ExtResource("4_od4o5")
 
 [node name="Camera2D" type="Camera2D" parent="gameTilemap/player" unique_id=1934411026]
 zoom = Vector2(1.8, 1.8)
-
-[node name="Control" type="CanvasLayer" parent="gameTilemap" unique_id=1804456540]
-
-[node name="Button2" type="Button" parent="gameTilemap/Control" unique_id=113617656]
-modulate = Color(1, 1, 1, 0.6784314)
-z_index = 1
-offset_left = 1129.0
-offset_top = 23.0
-offset_right = 1266.0
-offset_bottom = 164.0
-scale = Vector2(0.5, 0.5)
-icon = ExtResource("19_n70w5")
-
-[node name="ErasebgTransformed(10)" type="Sprite2D" parent="gameTilemap/Control" unique_id=1407923084]
-position = Vector2(54.000004, 51)
-scale = Vector2(0.50473183, 0.49170607)
-texture = ExtResource("18_eksqb")
-region_enabled = true
-region_rect = Rect2(0, 0, 191.52008, 196.00813)
-
-[node name="TextureButton" type="TextureButton" parent="gameTilemap/Control" unique_id=1275851274]
-modulate = Color(1, 1, 1, 0.8039216)
-offset_left = 1054.0
-offset_top = 25.0
-offset_right = 1177.0
-offset_bottom = 160.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("18_iwseu")
-texture_hover = ExtResource("18_iwseu")
-
-[node name="TextureButton2" type="TextureButton" parent="gameTilemap/Control" unique_id=643998485]
-offset_left = 52.0
-offset_top = 454.0
-offset_right = 298.0
-offset_bottom = 708.0
-scale = Vector2(0.6, 0.6)
-texture_normal = ExtResource("20_goo6f")
-texture_hover = ExtResource("20_goo6f")
 
 [node name="collide" type="Node" parent="gameTilemap" unique_id=92529541]
 
@@ -9895,6 +9869,173 @@ texture = ExtResource("1_qing5")
 region_enabled = true
 region_rect = Rect2(839.28436, 639.755, 122.3963, 20.574219)
 
+[node name="gui" type="CanvasLayer" parent="gameTilemap" unique_id=27980254]
+script = ExtResource("21_n70w5")
+
+[node name="Control" type="CanvasLayer" parent="gameTilemap/gui" unique_id=1804456540]
+
+[node name="ErasebgTransformed(10)" type="Sprite2D" parent="gameTilemap/gui/Control" unique_id=1407923084]
+position = Vector2(1167.0001, 51)
+scale = Vector2(0.50473183, 0.49170607)
+texture = ExtResource("18_eksqb")
+region_enabled = true
+region_rect = Rect2(0, 0, 191.52008, 196.00813)
+
+[node name="TextureButton" type="TextureButton" parent="gameTilemap/gui/Control" unique_id=1275851274]
+modulate = Color(1, 1, 1, 0.8039216)
+offset_left = 1054.0
+offset_top = 25.0
+offset_right = 1177.0
+offset_bottom = 160.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("18_iwseu")
+texture_hover = ExtResource("18_iwseu")
+
+[node name="setting" type="Label" parent="gameTilemap/gui/Control/TextureButton" unique_id=2123273468]
+modulate = Color(1, 0.89, 0.89, 0.96862745)
+z_index = 1
+layout_mode = 0
+offset_left = -1174.0
+offset_top = 244.0
+offset_right = -638.0
+offset_bottom = 406.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(0.06, 0.036000002, 0.036000002, 0.96862745)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.4862745)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.9490196)
+theme_override_constants/line_spacing = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = SubResource("FontVariation_n70w5")
+theme_override_font_sizes/font_size = 88
+theme_override_styles/normal = SubResource("StyleBoxFlat_goo6f")
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button" type="Button" parent="gameTilemap/gui/Control/TextureButton" unique_id=684953361]
+layout_mode = 0
+offset_left = -1044.0
+offset_top = 466.0
+offset_right = -940.0
+offset_bottom = 519.0
+theme_override_font_sizes/font_size = 32
+text = "sound"
+
+[node name="Button2" type="Button" parent="gameTilemap/gui/Control/TextureButton" unique_id=1848641404]
+layout_mode = 0
+offset_left = -1230.0
+offset_top = 834.0
+offset_right = -580.0
+offset_bottom = 962.0
+
+[node name="cancel" type="Button" parent="gameTilemap/gui/Control/TextureButton" unique_id=573961034]
+layout_mode = 1
+offset_left = -1144.0
+offset_top = 924.0
+offset_right = -682.0
+offset_bottom = 1076.0
+
+[node name="ColorRect" type="ColorRect" parent="gameTilemap/gui/Control/TextureButton" unique_id=1511756656]
+modulate = Color(1, 0.83, 0.83, 0.43529412)
+layout_mode = 0
+offset_left = -1390.0
+offset_top = 198.0
+offset_right = -490.0
+offset_bottom = 1106.0
+
+[node name="Button2" type="TextureButton" parent="gameTilemap/gui" unique_id=283872428]
+modulate = Color(1, 1, 1, 0.8235294)
+z_index = 1
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 153.0
+offset_bottom = 151.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("19_n70w5")
+texture_hover = ExtResource("19_n70w5")
+
+[node name="task_panel" type="Label" parent="gameTilemap/gui/Button2" unique_id=378789821]
+layout_mode = 0
+offset_left = 113.99997
+offset_top = 30.0
+offset_right = 290.8994
+offset_bottom = 192.91397
+scale = Vector2(2.1594186, 2.234308)
+text = "TASKS"
+
+[node name="Label" type="Label" parent="gameTilemap/gui/Button2/task_panel" unique_id=2083938067]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 31.666674
+offset_right = 190.0
+offset_bottom = 158.66669
+scale = Vector2(0.9, 0.9)
+text = "☐ Get Access Card
+☐ Secure Computer Lab
+☐ Check Library
+☐ Activate 3 Switches
+☐ Activate Lockdown"
+
+[node name="ColorRect" type="ColorRect" parent="gameTilemap/gui/Button2/task_panel" unique_id=160340662]
+z_index = -1
+layout_mode = 0
+offset_left = -0.9261551
+offset_top = 25.95882
+offset_right = 178.75186
+offset_bottom = 156.64803
+theme = SubResource("Theme_euojc")
+color = Color(0.69, 0.345, 0.345, 0.30980393)
+
+[node name="TextureButton2" type="Control" parent="gameTilemap/gui" unique_id=1212916543]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 52.0
+offset_top = 454.0
+offset_right = 298.0
+offset_bottom = 708.0
+scale = Vector2(0.6, 0.6)
+
+[node name="TextureRect" type="TextureRect" parent="gameTilemap/gui/TextureButton2" unique_id=1654386852]
+layout_mode = 0
+offset_left = -21.666666
+offset_top = 36.666664
+offset_right = 224.33333
+offset_bottom = 290.66666
+texture = ExtResource("20_goo6f")
+
+[node name="up" type="Button" parent="gameTilemap/gui/TextureButton2" unique_id=160763275]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 56.66667
+offset_top = 56.666664
+offset_right = 145.0
+offset_bottom = 126.666664
+
+[node name="down" type="Button" parent="gameTilemap/gui/TextureButton2" unique_id=1771408352]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 59.999996
+offset_top = 196.66669
+offset_right = 145.0
+offset_bottom = 280.0
+
+[node name="right" type="Button" parent="gameTilemap/gui/TextureButton2" unique_id=366306202]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 135.0
+offset_top = 131.66669
+offset_right = 220.0
+offset_bottom = 208.33337
+
+[node name="left" type="Button" parent="gameTilemap/gui/TextureButton2" unique_id=1521826948]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -6.666664
+offset_top = 123.333374
+offset_right = 64.99999
+offset_bottom = 211.66669
+
 [node name="2Acc93Bb189448019Ce719Ec8Cfa7c0a" type="Sprite2D" parent="." unique_id=1491810789]
 z_index = 3
 position = Vector2(582.7, 188.29999)
@@ -9915,7 +10056,17 @@ region_rect = Rect2(588.8401, 240.40805, 431.7284, 31.992065)
 [connection signal="body_exited" from="gameTilemap/class2" to="gameTilemap/class2" method="_on_body_exited"]
 [connection signal="body_entered" from="gameTilemap/adminD" to="gameTilemap/adminD" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/adminD" to="gameTilemap/adminD" method="_on_body_exited"]
-[connection signal="pressed" from="gameTilemap/Control/Button2" to="gameTilemap" method="_on_button_2_pressed"]
-[connection signal="pressed" from="gameTilemap/Control/TextureButton" to="gameTilemap" method="_on_texture_button_pressed"]
 [connection signal="body_entered" from="gameTilemap/msgZone" to="gameTilemap/msgZone" method="_on_body_entered"]
 [connection signal="body_exited" from="gameTilemap/msgZone" to="gameTilemap/door" method="_on_msg_zone_body_exited"]
+[connection signal="pressed" from="gameTilemap/gui/Control/TextureButton" to="gameTilemap/gui" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="gameTilemap/gui/Control/TextureButton/Button2" to="gameTilemap/gui" method="_on_button_2_pressed"]
+[connection signal="pressed" from="gameTilemap/gui/Control/TextureButton/cancel" to="gameTilemap/gui" method="_on_cancel_pressed"]
+[connection signal="pressed" from="gameTilemap/gui/Button2" to="gameTilemap/gui" method="_on_button_2_pressed"]
+[connection signal="button_down" from="gameTilemap/gui/TextureButton2/up" to="gameTilemap/gui" method="_on_up_button_down"]
+[connection signal="button_up" from="gameTilemap/gui/TextureButton2/up" to="gameTilemap/gui" method="_on_up_button_up"]
+[connection signal="button_down" from="gameTilemap/gui/TextureButton2/down" to="gameTilemap/gui" method="_on_down_button_down"]
+[connection signal="button_up" from="gameTilemap/gui/TextureButton2/down" to="gameTilemap/gui" method="_on_down_button_up"]
+[connection signal="button_down" from="gameTilemap/gui/TextureButton2/right" to="gameTilemap/gui" method="_on_right_button_down"]
+[connection signal="button_up" from="gameTilemap/gui/TextureButton2/right" to="gameTilemap/gui" method="_on_right_button_up"]
+[connection signal="button_down" from="gameTilemap/gui/TextureButton2/left" to="gameTilemap/gui" method="_on_left_button_down"]
+[connection signal="button_up" from="gameTilemap/gui/TextureButton2/left" to="gameTilemap/gui" method="_on_left_button_up"]

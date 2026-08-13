@@ -19,7 +19,7 @@ func _process(delta):
 			ObjectiveManager.update_objective()
 			SceneTransition.fade_to_scene(next_scene)
 		else:
-			PopupManager.show_message("Brooo 😭 even this door rejected you. Find the key first.", 2.5)
+			PopupManager.show_message("Congratulations! You found a locked door. 🏆.", 2.5)
 	
 
 func _on_msg_zone_body_exited(body: Node2D) -> void:
