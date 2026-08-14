@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c0pjp2g0gh0x1" path="res://scenes/player/player.tscn" id="9_3a1mc"]
 [ext_resource type="Script" uid="uid://c8pmyyw8iisok" path="res://scenes/player/playerr.gd" id="10_68fh4"]
 [ext_resource type="Script" uid="uid://tq0vi2stdxyb" path="res://scenes/maps/key.gd" id="11_hunfn"]
-[ext_resource type="Texture2D" uid="uid://c5vumnys1bmpv" path="res://assets/idfk.png" id="12_a5scf"]
+[ext_resource type="Texture2D" uid="uid://c5vumnys1bmpv" path="res://New folder/assets/idfk.png" id="12_a5scf"]
 [ext_resource type="Script" uid="uid://dldfv5pfb23tr" path="res://scenes/maps/ui.gd" id="13_mneoa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0n26"]

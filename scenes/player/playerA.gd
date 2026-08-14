@@ -3,7 +3,7 @@ extends CharacterBody2D
 var reversed_controls = false
 var mobile_direction: Vector2 = Vector2.ZERO
 
-const SPEED = 200.0
+const SPEED = 250.0
 
 func _physics_process(_delta):
 

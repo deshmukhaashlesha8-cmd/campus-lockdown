@@ -6204,7 +6204,7 @@ texture = ExtResource("1_r55kt")
 [node name="player" parent="." unique_id=501279140 groups=["player"] instance=ExtResource("2_cx6uu")]
 z_index = 2
 position = Vector2(605, 682)
-scale = Vector2(2.8, 2.8)
+scale = Vector2(2.5, 2.5)
 script = ExtResource("3_cx6uu")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1725831891]
