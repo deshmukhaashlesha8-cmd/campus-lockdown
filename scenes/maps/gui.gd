@@ -5,10 +5,15 @@ extends CanvasLayer
 func _ready() -> void:
 	if task_panel:
 		task_panel.visible = false
+		
+	
 
 func _on_button_2_pressed() -> void:
 	if task_panel:
 		task_panel.visible = !task_panel.visible
+		
+		
+		
 
 
 
@@ -79,3 +84,11 @@ func _on_cancel_pressed() -> void:
 	$SettingsPanel.visible = false
 	
 	var sound_on := true
+
+
+func _on_play_pressed() -> void:
+	SceneTransition.fade_to_scene("res://scenes/maps/main_menu.tscn")
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
