@@ -23,6 +23,7 @@ PopupManager="*uid://ckhki67abbdh8"
 GameManager="*uid://dwj5tkni23qfk"
 ObjectiveManager="*uid://dxuy85l3jwp8c"
 GameM="*uid://5vb5sxu5wxy4"
+Gui="*uid://bd3xgk43so5jd"
 
 [display]
 

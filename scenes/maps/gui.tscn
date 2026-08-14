@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://nuhxo8f1u6d8"]
+
+[ext_resource type="Script" uid="uid://bd3xgk43so5jd" path="res://scenes/maps/gui.gd" id="1_b1h5e"]
+[ext_resource type="Texture2D" uid="uid://f37rcj7878gk" path="res://scenes/maps/task map.png" id="2_mtaiw"]
+[ext_resource type="Texture2D" uid="uid://cp12ljl2hko2g" path="res://scenes/maps/control.png" id="3_v4ie0"]
+[ext_resource type="Texture2D" uid="uid://c83wqsdg711hk" path="res://scenes/maps/erasebg-transformed (10).png" id="4_rwf7b"]
+[ext_resource type="Texture2D" uid="uid://bf1k3nrppwhm" path="res://scenes/maps/setting.png" id="5_o784m"]
+
+[node name="gui" type="CanvasLayer" unique_id=1721906309]
+script = ExtResource("1_b1h5e")
+
+[node name="Button2" type="Button" parent="." unique_id=1500178189]
+modulate = Color(1, 1, 1, 0.6784314)
+z_index = 1
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 153.0
+offset_bottom = 151.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("2_mtaiw")
+
+[node name="task_panel" type="Label" parent="." unique_id=1303272432]
+visible = false
+offset_left = 89.0
+offset_top = 25.0
+offset_right = 293.16666
+offset_bottom = 228.33334
+scale = Vector2(1.2, 1.2)
+text = "TASKS"
+
+[node name="Label" type="Label" parent="task_panel" unique_id=1664666557]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 31.666674
+offset_right = 190.0
+offset_bottom = 158.66669
+scale = Vector2(0.9, 0.9)
+text = "☐ Get Access Card
+☐ Secure Computer Lab
+☐ Check Library
+☐ Activate 3 Switches
+☐ Activate Lockdown"
+
+[node name="TextureButton2" type="Control" parent="." unique_id=912241657]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 55.0
+offset_top = 442.0
+offset_right = 301.0
+offset_bottom = 696.0
+scale = Vector2(0.6, 0.6)
+
+[node name="TextureRect" type="TextureRect" parent="TextureButton2" unique_id=553425803]
+layout_mode = 0
+offset_left = -21.666666
+offset_top = 36.666664
+offset_right = 224.33333
+offset_bottom = 290.66666
+mouse_filter = 2
+texture = ExtResource("3_v4ie0")
+
+[node name="up" type="Button" parent="TextureButton2" unique_id=670485748]
+modulate = Color(1, 1, 1, 0.43137255)
+layout_mode = 0
+offset_left = 56.66667
+offset_top = 56.666664
+offset_right = 145.0
+offset_bottom = 126.666664
+
+[node name="down" type="Button" parent="TextureButton2" unique_id=430215327]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 59.999985
+offset_top = 196.66669
+offset_right = 144.99998
+offset_bottom = 280.0
+
+[node name="right" type="Button" parent="TextureButton2" unique_id=964169871]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 135.0
+offset_top = 131.66669
+offset_right = 220.0
+offset_bottom = 208.33337
+
+[node name="left" type="Button" parent="TextureButton2" unique_id=1396282090]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -6.666664
+offset_top = 123.333374
+offset_right = 64.99999
+offset_bottom = 211.66669
+
+[node name="Control" type="CanvasLayer" parent="." unique_id=1630643223]
+
+[node name="ErasebgTransformed(10)" type="Sprite2D" parent="Control" unique_id=660904171]
+position = Vector2(1167.0001, 51)
+scale = Vector2(0.50473183, 0.49170607)
+texture = ExtResource("4_rwf7b")
+region_enabled = true
+region_rect = Rect2(0, 0, 191.52008, 196.00813)
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=239983212]
+modulate = Color(1, 1, 1, 0.8039216)
+offset_left = 1054.0
+offset_top = 25.0
+offset_right = 1177.0
+offset_bottom = 160.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_o784m")
+texture_hover = ExtResource("5_o784m")
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="button_down" from="TextureButton2/up" to="." method="_on_up_button_down"]
+[connection signal="button_up" from="TextureButton2/up" to="." method="_on_up_button_up"]
+[connection signal="button_down" from="TextureButton2/down" to="." method="_on_down_button_down"]
+[connection signal="button_up" from="TextureButton2/down" to="." method="_on_down_button_up"]
+[connection signal="button_down" from="TextureButton2/right" to="." method="_on_right_button_down"]
+[connection signal="button_up" from="TextureButton2/right" to="." method="_on_right_button_up"]
+[connection signal="button_down" from="TextureButton2/left" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="TextureButton2/left" to="." method="_on_left_button_up"]

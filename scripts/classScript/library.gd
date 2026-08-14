@@ -19,6 +19,7 @@ func _process(delta):
 			ObjectiveManager.update_objective()
 			SceneTransition.fade_to_scene(next_scene)
 		else:
-			PopupManager.show_message("Find the key first..Even this door has trust issue!!", 2.5)
+			PopupManager.show_message("Find the key first..This door has trust issue
+			 from previous player😭!!", 2.5)
 		
 		

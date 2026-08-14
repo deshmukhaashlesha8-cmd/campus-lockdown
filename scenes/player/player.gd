@@ -1,15 +1,26 @@
 extends CharacterBody2D
 
-const SPEED = 150.0
-
 var reversed_controls = false
+var mobile_direction: Vector2 = Vector2.ZERO
+
+const SPEED = 200.0
 
 func _physics_process(_delta):
 
 	var direction = Vector2.ZERO
 
-	direction.x = Input.get_action_strength("walk_right") - Input.get_action_strength("walk_left")
-	direction.y = Input.get_action_strength("walk_down") - Input.get_action_strength("walk_up")
+	# Mobile control
+	if mobile_direction != Vector2.ZERO:
+		direction = mobile_direction
+
+	# Keyboard control
+	else:
+		if reversed_controls:
+			direction.x = Input.get_action_strength("walk_left") - Input.get_action_strength("walk_right")
+			direction.y = Input.get_action_strength("walk_up") - Input.get_action_strength("walk_down")
+		else:
+			direction.x = Input.get_action_strength("walk_right") - Input.get_action_strength("walk_left")
+			direction.y = Input.get_action_strength("walk_down") - Input.get_action_strength("walk_up")
 
 	if direction != Vector2.ZERO:
 		direction = direction.normalized()
