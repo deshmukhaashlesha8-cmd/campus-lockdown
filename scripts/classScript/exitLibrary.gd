@@ -16,4 +16,5 @@ func _on_body_exited(body):
 func _process(_delta):
 	if player_near and Input.is_action_just_pressed("interact"):
 		GameM.next_spawn = "ExitSpawn1"
+		Audiomanager.play_door_sound()
 		SceneTransition.fade_to_scene(next_scene)

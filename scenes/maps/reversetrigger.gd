@@ -6,7 +6,7 @@ func _ready():
 func _on_body_entered(body):
 	if body.has_method("activate_reverse_controls"):
 		GameManager.access_key_2 = true
-		
+		ObjectiveManager.update_objective()
 		body.activate_reverse_controls()
 		PopupManager.show_message("Access Key 2 acquired!", 2.0)
 		queue_free()

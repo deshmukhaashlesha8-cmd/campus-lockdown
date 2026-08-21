@@ -1,9 +1,60 @@
 [gd_scene format=3 uid="uid://bt6mulo6qmqa2"]
 
 [ext_resource type="Script" uid="uid://be7giq135mp3r" path="res://scenes/maps/control.gd" id="1_4rqo4"]
-[ext_resource type="Texture2D" uid="uid://bxlqv0ike3fj5" path="res://scenes/maps/ChatGPT Image Aug 9, 2026, 10_58_42 PM.png" id="2_djnby"]
+[ext_resource type="Texture2D" uid="uid://b5plktgo5uhbm" path="res://scenes/maps/ChatGPT Image Aug 15, 2026, 02_45_43 PM.png" id="2_djnby"]
 [ext_resource type="Texture2D" uid="uid://bgv5te7te4atm" path="res://scenes/maps/WhatsApp Image 2026-08-05 at 11.29.26 AM.jpeg" id="2_pmeri"]
 [ext_resource type="Texture2D" uid="uid://cv372iioubu6g" path="res://scenes/maps/ChatGPT_Image_Aug_6__2026__07_09_58_PM-removebg-preview.png" id="3_w3sa4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a85lo"]
+bg_color = Color(0.58, 0.16916667, 0.08699998, 0.65882355)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 14
+border_width_bottom = 15
+border_color = Color(0.17, 0.035699997, 0.035699997, 0.8352941)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sxhj"]
+bg_color = Color(0.61, 0.26890835, 0.2379, 0.039215688)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwcdj"]
+bg_color = Color(0.69, 0.27944997, 0.103499986, 0.8039216)
+border_width_left = 14
+border_width_top = 14
+border_width_right = 14
+border_width_bottom = 14
+border_color = Color(0.45, 0.03599999, 0.03599999, 0.9529412)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+corner_detail = 20
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rwcdj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djnby"]
+bg_color = Color(0.62315863, 0.23494801, 0.10275715, 0.7764706)
+border_width_left = 14
+border_width_top = 14
+border_width_right = 14
+border_width_bottom = 14
+border_color = Color(0.15, 0.025500003, 0.025500003, 0.8352941)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+corner_detail = 20
 
 [node name="main menu" type="Control" unique_id=315284014]
 layout_mode = 3
@@ -19,22 +70,34 @@ script = ExtResource("1_4rqo4")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1957913610]
 
 [node name="Start" type="Button" parent="CanvasLayer" unique_id=447749941]
-offset_left = 481.0
-offset_top = 326.0
-offset_right = 697.0
-offset_bottom = 384.0
+modulate = Color(0.99, 0.99, 0.99, 1)
+offset_left = 494.0
+offset_top = 420.0
+offset_right = 708.0
+offset_bottom = 487.0
+theme_override_colors/font_color = Color(0.88, 0.8712, 0.8712, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.9764706)
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_a85lo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0sxhj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rwcdj")
 text = "Start"
+icon = SubResource("ViewportTexture_rwcdj")
 
 [node name="Quit" type="Button" parent="CanvasLayer" unique_id=488118158]
-offset_left = 485.0
-offset_top = 410.0
-offset_right = 700.0
-offset_bottom = 467.0
+offset_left = 495.0
+offset_top = 508.0
+offset_right = 710.0
+offset_bottom = 572.0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_djnby")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0sxhj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rwcdj")
 text = "Quit"
 
 [node name="ChatGptImageAug9,2026,105842Pm" type="Sprite2D" parent="." unique_id=1831455855]
-position = Vector2(605.5, 330)
-scale = Vector2(0.8584253, 0.6353591)
+position = Vector2(611.5359, 358)
+scale = Vector2(0.84155005, 0.7638298)
 texture = ExtResource("2_djnby")
 
 [node name="WhatsAppImage20260805At11_29_26Am" type="Sprite2D" parent="." unique_id=2140073824]
@@ -44,7 +107,7 @@ scale = Vector2(0.8397791, 0.60589314)
 texture = ExtResource("2_pmeri")
 
 [node name="ChatGptImageAug62026070958PmRemovebgPreview" type="Sprite2D" parent="." unique_id=1500569394]
-position = Vector2(604, 200)
+position = Vector2(608.00006, 259)
 scale = Vector2(0.78285354, 0.7051282)
 texture = ExtResource("3_w3sa4")
 

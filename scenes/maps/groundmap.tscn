@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bx7v83x8crvc6" path="res://scenes/maps/game_tilemap.gd" id="1_gikht"]
 [ext_resource type="PackedScene" uid="uid://c0pjp2g0gh0x1" path="res://scenes/player/player.tscn" id="1_omtfk"]
 [ext_resource type="Texture2D" uid="uid://dfn3gln4b5214" path="res://scenes/maps/2acc93bb-1894-4801-9ce7-19ec8cfa7c0a.png" id="1_qing5"]
+[ext_resource type="Script" uid="uid://dfrdmgr1qva0k" path="res://scenes/maps/start.gd" id="2_a2l1n"]
 [ext_resource type="Script" uid="uid://db8iis4gtrlog" path="res://scripts/classScript/comp.gd" id="3_g3n7f"]
 [ext_resource type="PackedScene" uid="uid://dkyj88wi02bvu" path="res://scenes/maps/door.tscn" id="3_uldgt"]
 [ext_resource type="Script" uid="uid://b8dvne2v2d5l0" path="res://scenes/maps/cdoor.gd" id="4_k6vc2"]
@@ -23,6 +24,27 @@
 [ext_resource type="Texture2D" uid="uid://f37rcj7878gk" path="res://scenes/maps/task map.png" id="19_n70w5"]
 [ext_resource type="Texture2D" uid="uid://cp12ljl2hko2g" path="res://scenes/maps/control.png" id="20_goo6f"]
 [ext_resource type="Script" uid="uid://bd3xgk43so5jd" path="res://scenes/maps/gui.gd" id="21_n70w5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_euojc"]
+bg_color = Color(0.57, 0.22914, 0.12540002, 0.18039216)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.01, 0.01, 0.01, 1)
+corner_radius_top_left = 59
+corner_radius_top_right = 59
+corner_radius_bottom_right = 59
+corner_radius_bottom_left = 59
+
+[sub_resource type="Animation" id="Animation_goo6f"]
+resource_name = "menu_intro"
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a2l1n"]
+_data = {
+&"menu_intro": SubResource("Animation_goo6f")
+}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0n26"]
 texture = ExtResource("5_qhs7t")
@@ -9609,20 +9631,41 @@ corner_radius_bottom_left = 60
 [sub_resource type="Theme" id="Theme_c8ww8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6h8yk"]
-bg_color = Color(0.6, 0.6, 0.6, 0.4745098)
+bg_color = Color(0.83, 0.50353336, 0.34030002, 0.6431373)
 border_width_left = 24
-border_width_top = 14
+border_width_top = 16
 border_width_right = 28
 border_width_bottom = 20
-border_color = Color(0.5, 0.5, 0.5, 1)
+border_color = Color(0.19, 0.087495, 0.032300003, 0.50980395)
 corner_radius_top_left = 60
 corner_radius_top_right = 60
 corner_radius_bottom_right = 60
 corner_radius_bottom_left = 60
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_256ja"]
+bg_color = Color(0.63, 0.38472003, 0.17009999, 0.6392157)
+border_width_left = 21
+border_width_top = 21
+border_width_right = 21
+border_width_bottom = 21
+border_color = Color(0.09, 0.038955, 0.015300002, 0.7490196)
+corner_radius_top_left = 52
+corner_radius_top_right = 52
+corner_radius_bottom_right = 52
+corner_radius_bottom_left = 52
+corner_detail = 10
+
 [sub_resource type="Theme" id="Theme_euojc"]
 
 [sub_resource type="Theme" id="Theme_eksqb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2l1n"]
+bg_color = Color(0.04, 0.04, 0.04, 0.8235294)
+corner_radius_top_left = 31
+corner_radius_top_right = 31
+corner_radius_bottom_right = 31
+corner_radius_bottom_left = 31
+corner_detail = 18
 
 [sub_resource type="FontFile" id="FontFile_dtncd"]
 cache/0/variation_coordinates = {}
@@ -9803,12 +9846,58 @@ font_size = 33
 font_color = Color(1, 0.82, 0.82, 1)
 shadow_size = 9
 
+[sub_resource type="FontVariation" id="FontVariation_goo6f"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_tf2b5"]
 line_spacing = 2.0
 font_size = 11
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gck5"]
+border_width_left = 3
+border_width_top = 4
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a85lo"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djnby"]
+border_width_left = 3
+border_width_top = 4
+corner_radius_top_left = 21
+corner_radius_top_right = 21
+corner_radius_bottom_right = 21
+corner_radius_bottom_left = 21
+corner_detail = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwcdj"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_awsrp"]
+border_width_left = 3
+border_width_top = 4
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sxhj"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7optt"]
 particle_flag_disable_z = true
+spread = 25.435
 initial_velocity_min = 248.93
 initial_velocity_max = 248.93
 gravity = Vector3(500, 98, 0)
@@ -9823,11 +9912,42 @@ position = Vector2(0, -7)
 [node name="gameTilemap" type="Node" parent="." unique_id=402748916]
 script = ExtResource("1_gikht")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="gameTilemap" unique_id=210181964]
+
+[node name="ColorRect" type="ColorRect" parent="gameTilemap/CanvasLayer" unique_id=1051046356]
+visible = false
+z_index = 2
+offset_left = -49.0
+offset_top = -179.0
+offset_right = 1262.0
+offset_bottom = 885.0
+color = Color(0.68, 0.24786, 0.047599997, 0.40392157)
+script = ExtResource("2_a2l1n")
+
+[node name="Label" type="Label" parent="gameTilemap/CanvasLayer/ColorRect" unique_id=863241678]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 299.0
+offset_right = 998.0
+offset_bottom = 712.0
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_euojc")
+text = "⚠ EMERGENCY ALERT
+
+Unidentified infection detected inside campus.
+All departments are under lockdown.
+DO NOT EXIT THE CAMPUS."
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Sprite2D" type="Sprite2D" parent="gameTilemap" unique_id=771104494]
 position = Vector2(607.99994, 340.5)
 scale = Vector2(0.7584973, 0.7473348)
 texture = ExtResource("1_qing5")
 metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gameTilemap/Sprite2D" unique_id=201385349]
+libraries/ = SubResource("AnimationLibrary_a2l1n")
 
 [node name="mainMap" type="TileMapLayer" parent="gameTilemap" unique_id=1418328062]
 position = Vector2(29, 10)
@@ -9860,6 +9980,7 @@ position = Vector2(480, 341)
 [node name="library" parent="gameTilemap" unique_id=378668904 instance=ExtResource("3_uldgt")]
 position = Vector2(421, 137)
 script = ExtResource("8_k6vc2")
+next_scene = null
 
 [node name="ExitSpawn1" type="Marker2D" parent="gameTilemap" unique_id=579772419]
 position = Vector2(442, 160)
@@ -9912,7 +10033,7 @@ position = Vector2(731, 159)
 [node name="player" parent="gameTilemap" unique_id=501279140 groups=["player"] instance=ExtResource("1_omtfk")]
 z_index = 1
 position = Vector2(581, 337.00003)
-scale = Vector2(0.9, 0.9)
+scale = Vector2(0.8, 0.8)
 script = ExtResource("4_od4o5")
 
 [node name="Camera2D" type="Camera2D" parent="gameTilemap/player" unique_id=1934411026]
@@ -9930,14 +10051,14 @@ scale = Vector2(0.8, 0.8)
 z_index = 2
 position = Vector2(142.00002, 13.999992)
 rotation = 0.001852246
-polygon = PackedVector2Array(383.3114, 167.7903, 348.33923, 182.8551, 547.62146, 469.98645, 562.62604, 472.45868, 561.32275, 443.71103, 551.3413, 453.72952, 390, 210, 404, 192, 416, 191, 779.5584, 165.80635)
+polygon = PackedVector2Array(383.3114, 167.7903, 348.33923, 182.8551, 547.62146, 469.98645, 555.12604, 472.4726, 560.05194, 432.46338, 552.545, 428.72726, 398.39703, 214.01244, 404, 192, 416, 191, 797.144, 212.02385, 779.5584, 165.80635)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="gameTilemap/collide/grd" unique_id=504896166]
 z_index = 2
 position = Vector2(231.25002, 58.749992)
 rotation = 0.03050932
 scale = Vector2(0.9460789, 0.99948394)
-polygon = PackedVector2Array(744.8623, 102.353874, 350.03488, 115.01093, 741, 124, 752, 135, 562.4397, 389.14993, 557.1974, 390.5526, 557.92285, 413.05374, 569.6876, 408.9602, 731.47327, 179.06555, 777.2023, 121.43929)
+polygon = PackedVector2Array(744.8623, 102.353874, 318.29947, 114.676476, 337.0798, 164.18307, 729.10474, 146.60205, 741, 124, 734.26636, 142.69928, 567.11755, 370.2464, 558.1553, 379.26392, 564.36487, 407.86273, 569.6876, 408.9602, 731.47327, 179.06555, 777.2023, 121.43929)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="gameTilemap/collide/grd" unique_id=1702460652]
 position = Vector2(0, -31.249996)
@@ -9949,6 +10070,16 @@ polygon = PackedVector2Array(801.24994, 719.99994, 799.99994, 748.74994, 1559.99
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="gameTilemap/collide/grd" unique_id=526794422]
 polygon = PackedVector2Array(-32.499996, -36.249996, -32.499996, 829.99994, 1553.7499, 829.99994, 1552.4999, -43.749996, -17.499998, -44.999996, -14.999998, -64.99999, 1568.7499, -56.249992, 1569.9999, 846.24994, -43.749996, 842.49994, -44.999996, -48.749992)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="gameTilemap/collide/grd" unique_id=1456006545]
+position = Vector2(-1.2499999, -6.249998)
+polygon = PackedVector2Array(678.74994, 243.74997, 681.24994, 298.74997, 803.74994, 349.99997, 797.49994, 304.99997)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="gameTilemap/collide/grd" unique_id=152432005]
+polygon = PackedVector2Array(662.49994, 297.49997, 651.24994, 306.24997, 654.99994, 317.49997, 668.74994, 319.99997, 678.74994, 304.99997)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="gameTilemap/collide/grd" unique_id=1486549101]
+polygon = PackedVector2Array(774.99994, 354.99997, 758.74994, 353.74997, 759.99994, 366.24997, 773.74994, 376.24997, 783.74994, 361.24997)
 
 [node name="entrance" type="StaticBody2D" parent="gameTilemap/collide" unique_id=1074791323]
 visible = false
@@ -10028,7 +10159,7 @@ script = ExtResource("14_upabi")
 message_text = "Now u here so find access key now!!"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gameTilemap/msgZone" unique_id=202991114]
-position = Vector2(24, 14)
+position = Vector2(24, -30)
 shape = SubResource("RectangleShape2D_c8ww8")
 
 [node name="popupbox" parent="gameTilemap" unique_id=1055576107 instance=ExtResource("16_kjf42")]
@@ -10105,10 +10236,9 @@ texture_hover = ExtResource("18_iwseu")
 
 [node name="settings" type="CanvasLayer" parent="gameTilemap/gui/TextureButton" unique_id=948706327]
 unique_name_in_owner = true
-visible = false
 
 [node name="setting" type="Label" parent="gameTilemap/gui/TextureButton/settings" unique_id=2123273468]
-modulate = Color(1, 0.93, 0.93, 0.7372549)
+modulate = Color(0.98, 0.6272, 0.6272, 0.90588236)
 self_modulate = Color(1, 1, 1, 0.7921569)
 z_index = 1
 offset_left = 470.00003
@@ -10146,9 +10276,10 @@ offset_top = 455.99988
 offset_right = 785.25
 offset_bottom = 544.75
 scale = Vector2(0.6, 0.6)
-theme_override_colors/font_color = Color(0.5, 0.025000006, 0.025000006, 1)
+theme_override_colors/font_color = Color(0.03, 0.028499998, 0.028499998, 1)
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxFlat_6h8yk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_256ja")
 text = "cancel"
 
 [node name="quit" type="Button" parent="gameTilemap/gui/TextureButton/settings" unique_id=420372724]
@@ -10157,25 +10288,26 @@ offset_top = 374.99988
 offset_right = 752.3334
 offset_bottom = 455.99988
 scale = Vector2(0.7, 0.7)
-theme_override_colors/font_color = Color(0.48, 0.01920001, 0.01920001, 1)
+theme_override_colors/font_color = Color(0.02, 0.019199999, 0.019199999, 1)
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxFlat_6h8yk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_256ja")
 text = "Quit"
 
 [node name="play" type="Button" parent="gameTilemap/gui/TextureButton/settings" unique_id=684953361]
 offset_left = 509.00003
 offset_top = 291.00003
 offset_right = 759.0001
-offset_bottom = 372.00003
+offset_bottom = 376.71426
 scale = Vector2(0.7, 0.7)
-theme_override_colors/font_color = Color(0.44, 0.013199987, 0.013199987, 1)
+theme_override_colors/font_color = Color(0.03, 0.028499998, 0.028499998, 1)
 theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxFlat_6h8yk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_256ja")
 text = "Play again"
 
 [node name="Button2" type="TextureButton" parent="gameTilemap/gui" unique_id=283872428]
 modulate = Color(1, 1, 1, 0.8235294)
-z_index = 1
 offset_left = 16.0
 offset_top = 10.0
 offset_right = 153.0
@@ -10280,17 +10412,18 @@ visible = false
 script = ExtResource("18_eksqb")
 
 [node name="background" type="ColorRect" parent="ending ui" unique_id=1020082025]
-modulate = Color(0.15, 0.08330001, 0.06300001, 0.5137255)
+modulate = Color(0.49955207, 0.19902849, 0.005315945, 0.5137255)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 230.0
-offset_top = 145.0
-offset_right = -529.0
-offset_bottom = -247.0
+offset_left = -49.999985
+offset_top = -172.00003
+offset_right = -1079.0348
+offset_bottom = -567.94824
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.5, 1.5)
+scale = Vector2(6.9328485, 3.7502148)
+offset_transform_enabled = true
 theme = SubResource("Theme_eksqb")
 
 [node name="popup" type="Panel" parent="ending ui" unique_id=859096835]
@@ -10299,32 +10432,35 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -262.5
-offset_top = -114.5
-offset_right = 167.5
-offset_bottom = 126.5
+offset_left = -363.5
+offset_top = -201.5
+offset_right = 319.5
+offset_bottom = 193.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a2l1n")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ending ui/popup" unique_id=1263130191]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 29.0
-offset_right = 429.0
-offset_bottom = 240.0
+offset_left = 66.0
+offset_top = 49.0
+offset_right = 455.0
+offset_bottom = 206.0
+scale = Vector2(1.4, 1.4)
 theme_override_constants/separation = 16
 
 [node name="title" type="Label" parent="ending ui/popup/VBoxContainer" unique_id=1675290711]
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontFile_dtncd")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 56
 text = "Campus secured"
 label_settings = SubResource("LabelSettings_3ucf3")
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="ending ui/popup/VBoxContainer" unique_id=2051207182]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
+theme_override_fonts/font = SubResource("FontVariation_goo6f")
+theme_override_font_sizes/font_size = 30
 text = "Lockdown Protocol Successfully Activated"
 label_settings = SubResource("LabelSettings_tf2b5")
 horizontal_alignment = 1
@@ -10332,7 +10468,7 @@ horizontal_alignment = 1
 [node name="Label" type="Label" parent="ending ui/popup/VBoxContainer" unique_id=2038077090]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.86, 0.86, 1)
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 17
 text = "Cause of outbreak: Canteen Samosa Chutney!!!!"
 horizontal_alignment = 1
 
@@ -10341,39 +10477,55 @@ layout_mode = 2
 
 [node name="Button3" type="Button" parent="ending ui" unique_id=839987990]
 modulate = Color(1, 0.6, 0.6, 1)
-offset_left = 415.0
-offset_top = 383.0
-offset_right = 499.0
-offset_bottom = 415.0
+offset_left = 369.0
+offset_top = 393.0
+offset_right = 461.30768
+offset_bottom = 426.84613
+scale = Vector2(1.4, 1.4)
+theme_override_colors/font_color = Color(0.01, 0.01, 0.01, 1)
+theme_override_colors/font_hover_color = Color(0.01, 0.01, 0.01, 1)
 theme_override_colors/icon_normal_color = Color(1, 0.66999996, 0.66999996, 1)
 theme_override_colors/icon_focus_color = Color(1, 0.72, 0.72, 1)
 theme_override_colors/icon_pressed_color = Color(1, 0.69, 0.69, 1)
 theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gck5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a85lo")
 text = "Next level"
 
 [node name="Button2" type="Button" parent="ending ui" unique_id=1577399545]
-modulate = Color(1, 0.5, 0.5, 1)
-offset_left = 643.0
-offset_top = 383.0
-offset_right = 721.0
-offset_bottom = 411.0
+modulate = Color(0.96, 0.50879997, 0.50879997, 0.9843137)
+offset_left = 727.0
+offset_top = 396.0
+offset_right = 810.8461
+offset_bottom = 425.23077
+scale = Vector2(1.4, 1.4)
 offset_transform_enabled = true
+theme_override_colors/font_color = Color(0.01, 0.01, 0.01, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_djnby")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rwcdj")
 text = "Quit"
 
 [node name="Button" type="Button" parent="ending ui" unique_id=1213197760]
 modulate = Color(1, 0.6, 0.6, 1)
-offset_left = 526.0
-offset_top = 383.0
-offset_right = 611.0
-offset_bottom = 414.0
+offset_left = 552.00006
+offset_top = 435.00003
+offset_right = 645.0769
+offset_bottom = 465.76926
+scale = Vector2(1.4, 1.4)
+theme_override_colors/font_color = Color(0.01, 0.01, 0.01, 1)
+theme_override_colors/font_hover_color = Color(0.01, 0.01, 0.01, 1)
 theme_override_colors/icon_normal_color = Color(1, 0.66999996, 0.66999996, 1)
 theme_override_colors/icon_focus_color = Color(1, 0.72, 0.72, 1)
 theme_override_colors/icon_pressed_color = Color(1, 0.69, 0.69, 1)
 theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_awsrp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0sxhj")
 text = "Play again"
 
 [node name="confetti" type="GPUParticles2D" parent="ending ui" unique_id=1509485110]
+visible = false
 position = Vector2(580, 324)
 emitting = false
 amount = 150

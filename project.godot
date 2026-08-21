@@ -24,13 +24,14 @@ GameManager="*uid://dwj5tkni23qfk"
 ObjectiveManager="*uid://dxuy85l3jwp8c"
 GameM="*uid://5vb5sxu5wxy4"
 Gui="*uid://bd3xgk43so5jd"
+Audiomanager="*uid://b61ppl3r7o38t"
 
 [display]
 
-window/size/viewport_width=1219
-window/size/viewport_height=657
-window/stretch/mode="viewport"
-window/stretch/aspect="keep_height"
+window/size/viewport_width=1250
+window/size/viewport_height=720
+window/size/mode=3
+window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
 [editor]

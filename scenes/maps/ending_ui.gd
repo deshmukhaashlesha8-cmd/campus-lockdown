@@ -23,7 +23,7 @@ func show_ending():
 	$confetti.emitting = true
 
 func _on_button_pressed() -> void:
-	get_tree().reload_current_scene()
+	SceneTransition.fade_to_scene("res://scenes/maps/main_menu.tscn")
 
 func _on_button_2_pressed() -> void:
 	get_tree().quit()

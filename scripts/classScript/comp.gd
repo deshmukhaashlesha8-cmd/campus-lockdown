@@ -16,6 +16,7 @@ func _on_body_exited(body):
 func _process(delta):
 	if player_near and Input.is_action_just_pressed("interact"):
 		if GameManager.has_lab_key:
+			Audiomanager.play_door_sound()
 			ObjectiveManager.update_objective()
 			SceneTransition.fade_to_scene(next_scene)
 		else:

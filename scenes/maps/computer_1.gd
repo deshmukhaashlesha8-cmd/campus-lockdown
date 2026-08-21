@@ -30,6 +30,7 @@ func _process(delta):
 				if GameManager.pc1_on and GameManager.pc2_on:
 					GameManager.pc3_on = true
 					GameManager.access_key_3 = true
+					ObjectiveManager.update_objective()
 					PopupManager.show_message("Access Key 3 acquired! Return to the Entrance 😎", 3.0)
 				else:
 					PopupManager.show_message("Boot PC 1 and PC 2 first, genius 😭", 2.5)

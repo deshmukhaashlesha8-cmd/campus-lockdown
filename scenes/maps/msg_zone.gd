@@ -11,7 +11,11 @@ func _on_body_entered(body: Node2D) -> void:
 		if trigger_once and has_triggered:
 			return
 		has_triggered = true
-		PopupManager.show_message(message_text, display_time)
+		PopupManager.show_message("libraryyy seemss supicious!", 32.0)
+		await get_tree().create_timer(2.5).timeout
+		
+		PopupManager.show_message("██████ 100%", 2.0)
+		await get_tree().create_timer(1.0).timeout
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)

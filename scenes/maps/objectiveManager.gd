@@ -10,7 +10,14 @@ func update_objective():
 	if objective_label == null:
 		return
 
-	if GameManager.has_lab_key:
-		objective_label.text = "Objective: Unlock the Lab Door"
-	else:
-		objective_label.text = "Objective: Find the Lab Key"
+	if not GameManager.access_key_1:
+		objective_label.text = "Objective: Find the Access Key in the Admin Office"
+
+	elif not GameManager.access_key_2:
+		objective_label.text = "Objective: Go to the Library and find Key 2"
+
+	elif not GameManager.access_key_3:
+		objective_label.text = "Objective: Access the Computer Lab and find the correct computer"
+
+	elif GameManager.all_tasks_done():
+		objective_label.text = "Objective: Activate Campus Lockdown"
